@@ -78,14 +78,11 @@ async function scripts() {
         .pipe(browsersync.stream());
 }
 
-async function img() {
-    const imagemin = (await import('gulp-imagemin')).default;
-
-    return gulp.src(path.images.src)
+const img = gulp.series(cleanImages, async function img() {
+    return gulp.src(path.images.src, { encoding: false })
         .pipe(newer(path.images.dest))
-        .pipe(imagemin())
         .pipe(gulp.dest(path.images.dest));
-}
+})
 
 
 // Отслеживание изменений
