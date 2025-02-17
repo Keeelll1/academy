@@ -1,2 +1,10 @@
+@use 'colors';
+@use 'normalize';
+@use 'fonts';
+@use 'header';
 
+.container{
+    max-width: 1462px;
+    margin: 0 auto;
+}
 
