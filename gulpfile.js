@@ -21,7 +21,7 @@ const path = {
         dest: 'dist/js/'
     },
     images: {
-        src: 'src/images/**/*',
+        src: 'src/images/**/*.*',
         dest: 'dist/images'
     },
     html: {
@@ -78,28 +78,15 @@ async function scripts() {
         .pipe(browsersync.stream());
 }
 
-const img = gulp.series(cleanImages, async function () {
+async function img() {
     const imagemin = (await import('gulp-imagemin')).default;
-    const mozjpeg = (await import('imagemin-mozjpeg')).default;
-    const pngquant = (await import('imagemin-pngquant')).default;
-    const webp = (await import('imagemin-webp')).default;
-    const gifsicle = (await import('imagemin-gifsicle')).default;
-    const svgo = (await import('imagemin-svgo')).default;
 
     return gulp.src(path.images.src)
         .pipe(newer(path.images.dest))
-        .pipe(plumber({ errorHandler: handleError }))
-        .pipe(imagemin([
-            gifsicle({ interlaced: true }),
-            mozjpeg({ quality: 75, progressive: true }),
-            pngquant({ quality: [0.65, 0.80], speed: 4 }),
-            webp({ quality: 75 }),
-            svgo({
-                plugins: [{ name: 'removeViewBox', active: true }]
-            })
-        ]))
+        .pipe(imagemin())
         .pipe(gulp.dest(path.images.dest));
-});
+}
+
 
 // Отслеживание изменений
 function watch() {

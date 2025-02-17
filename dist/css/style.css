@@ -266,7 +266,10 @@ a {
   align-items: center;
   position: relative;
 }
-
+.logo__img {
+  width: 57px;
+  height: 63px;
+}
 .logo__text {
   max-width: 170px;
   font-family: "Arial", sans-serif;
@@ -274,7 +277,6 @@ a {
   margin-left: 30px;
   position: relative;
 }
-
 .logo__text::before {
   content: "";
   position: absolute;
