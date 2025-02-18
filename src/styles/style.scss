@@ -1,10 +1,36 @@
 @use 'colors';
 @use 'normalize';
-@use 'fonts';
 @use 'header';
+@use 'main';
 
 .container{
     max-width: 1462px;
     margin: 0 auto;
 }
 
+.title__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Dela Gothic One";
+    color: var(--white);
+    padding: 5px 30px;
+    border-radius: 105px;
+    background-color: var(--dark-blue);
+    width: fit-content;
+}
+
+.under__title{
+    color: var(--dark-blue);
+    padding: 5px 30px;
+    border-radius: 105px;
+    font-size: 32px;
+    background-color: var(--white);
+    width: fit-content;
+}

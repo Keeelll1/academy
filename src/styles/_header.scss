@@ -1,37 +1,108 @@
-.header{
-    background-color: var(--blue);
+.header-main{
+    background-color: var(--indigo);
 }
 
 .header__inner{
-    padding: 11px 0;
+    padding: 15px 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
+    font-family: 'Arial', serif;
 
-.logo{
-    align-items: center;
-    position: relative;
-
-    &__img{
-        width: 57px;
-        height: 63px;
+    .logo{
+        align-items: center;
+        position: relative;
+    
+        &__img{
+            width: 57px;
+            height: 63px;
+        }
+    
+        &__text{
+            max-width: 170px;
+            font-weight: 400;
+            margin-left: 30px;
+            position: relative;
+    
+            &::before{
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 70px;
+                background-color: var(--line-blue);
+                left: -15px;
+                top: -17px;
+            }
+        }
     }
 
-    &__text{
-        max-width: 170px;
+    .menu__wrapper{
+        display: flex;
+        gap: 40px;
+
+        &-item{
         font-family: 'Arial', sans-serif;
         font-weight: 400;
-        margin-left: 30px;
-        position: relative;
 
-        &::before{
-            content: '';
-            position: absolute;
-            width: 1px;
-            height: 70px;
+            .dropdown{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+
+                .arrow{
+                    cursor: pointer;
+                    transition: 0.1s;
+
+                    &-active{
+                        transform: rotate(90deg);
+                    }
+                }
+
+                &-menu{
+                    position: absolute;
+                    top: 35px;
+                    left: -25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 0 25px 32px 25px;
+                    background-color: var(--indigo);
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    display: none;
+
+                    &-active{
+                        display: flex;
+                    }
+
+                    &-item{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__content{
+        display: flex;
+        gap: 11px;
+
+        &-item{
             background-color: var(--line-blue);
-            left: -15px;
-            top: -10px;
+
+            &-social{
+                padding: 14px;
+                border-radius: 50%;
+            }
+
+            &-button{
+                text-transform: uppercase;
+                padding: 12px 28px;
+                line-height: 21px;
+                border-radius: 30px;
+                font-weight: 700;
+            }
         }
     }
 }

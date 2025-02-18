@@ -1,6 +1,7 @@
 "use strict";
 
 const gulp = require('gulp');
+const { src, dest, series, parallel, watch } = gulp;
 const sass = require('gulp-sass')(require('sass'));
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
@@ -31,7 +32,7 @@ const path = {
 }
 
 function cleanImages() {
-    return gulp.src(path.images.dest, { allowEmpty: true, read: false })
+    return src(path.images.dest, { allowEmpty: true, read: false })
         .pipe(clean());
 }
 
@@ -40,11 +41,11 @@ function handleError(err) {
     this.emit('end');
 }
 
-// Задача для минимализации HTML
+// Задача для обработки HTML
 function html() {
-    return gulp.src(path.html.src)
+    return src(path.html.src)
         .pipe(plumber({ errorHandler: handleError }))
-        .pipe(gulp.dest(path.html.dest))
+        .pipe(dest(path.html.dest))
         .pipe(browsersync.stream());
 }
 
@@ -52,7 +53,7 @@ function html() {
 async function styles() {
     const autoprefixer = await import('gulp-autoprefixer');
 
-    return gulp.src(path.styles.src)
+    return src(path.styles.src)
         .pipe(plumber({ errorHandler: handleError }))
         .pipe(sass({ silent: true }).on('error', sass.logError))
         .pipe(sourcemaps.init())
@@ -61,53 +62,51 @@ async function styles() {
             overrideBrowserslist: ["> 0.5%", "last 3 versions"]
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.styles.dest))
+        .pipe(dest(path.styles.dest))
         .pipe(browsersync.stream());
 }
 
 // Задача для обработки скриптов
 async function scripts() {
-
-    return gulp.src(path.scripts.src, { sourcemaps: true })
+    return src(path.scripts.src, { sourcemaps: true })
         .pipe(plumber({ errorHandler: handleError }))
         .pipe(sourcemaps.init())
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(path.scripts.dest))
+        .pipe(dest(path.scripts.dest))
         .pipe(browsersync.stream());
 }
 
-const img = gulp.series(cleanImages, async function img() {
-    return gulp.src(path.images.src, { encoding: false })
+const img = series(cleanImages, async function img() {
+    return src(path.images.src, { encoding: false })
         .pipe(newer(path.images.dest))
-        .pipe(gulp.dest(path.images.dest));
-})
-
+        .pipe(dest(path.images.dest));
+});
 
 // Отслеживание изменений
-function watch() {
+function watcher() {
     browsersync.init({
         server: {
             baseDir: './dist/'
         }
-    })
-    gulp.watch(path.html.dest).on('change', browsersync.reload)
-    gulp.watch(path.html.src, html);
-    gulp.watch(path.styles.src, styles);
-    gulp.watch(path.scripts.src, scripts);
-    gulp.watch(path.images.src, img);
+    });
+    watch(path.html.dest).on('change', browsersync.reload);
+    watch(path.html.src, html);
+    watch(path.styles.src, styles);
+    watch(path.scripts.src, scripts);
+    watch(path.images.src, img);
 }
 
 // Задача билд
-const build = gulp.series(html, gulp.parallel(styles, scripts, img));
-const dev = gulp.series(build, gulp.parallel(watch));
+const build = series(html, parallel(styles, scripts, img));
+const dev = series(build, parallel(watcher));
 
 exports.styles = styles;
 exports.scripts = scripts;
 exports.img = img;
 exports.html = html;
-exports.watch = watch;
+exports.watch = watcher;
 exports.build = build;
 exports.dev = dev;
 exports.default = dev;
