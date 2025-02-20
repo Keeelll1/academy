@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Главная</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header class="header header-main">
@@ -105,7 +106,7 @@
         </section>
         <section class="advantages">
             <div class="advantages-wrapper container">
-                <div class="title__wrapper">
+                <div class="title__wrapper title__wrapper-advantages">
                     <h2 class="title">наши</h2>
                     <h2 class="title under__title under__title-advantages">преимущества</h2>
                 </div>
@@ -124,10 +125,13 @@
                 <div class="feedback-right-content">
                     <p class="feedback-text">Выражаю слова благодарности нашим тренерам. Спасибо тренерам за труд и незабываемые эмоции нашим детям. Вы всегда с заботой и самоотдачей работаете с нашими детьми, заботитесь об их успехах, радуетесь их достижениям. Ваше отношение дорогого стоит.</p>
                     <div class="feedback-content-wrapper">
-                        <div class="feedback-avatar">
+                        <div class="feedback-avatar avatar-wrapper">
                             <p class="feedback-avatar-name">Мария Тихомирова</p>
-                            <div class="feedback-avatar-place">
-                                <img class="feedback-avatar-img" src="./images/avatar-bear.png" alt="avatar">
+                            <div class="avatar-wrapper">
+                                <div class="feedback-avatar-place">
+                                    <img class="feedback-avatar-img" src="./images/avatar-bear.png" alt="avatar">
+                                </div>
+                                <img src="./images/icons/vk.svg" alt="vk" class="avatar-social">
                             </div>
                         </div>
                         <div class="feedback-name-wrapper">
@@ -145,7 +149,7 @@
                     <h2 class="training-title">пробная тренировка</h2>
                     <div class="training-bottom-content">
                         <p class="training-text">приходи</p>
-                        <button class="training-btn">Запишись на футбол</button>
+                        <button class="btn__link btn__link-training">Запишись на футбол</button>
                         <img src="./images/bear-51.png" alt="bear" class="training-bear">
                     </div>
                     <img src="./images/icons/big-cross.svg" alt="cross" class="cross-training">
@@ -154,7 +158,508 @@
                 </div>
             </div>
         </section>
+        <section class="programs">
+            <div class="small__container">
+                <div class="programs-wrapper">
+                    <div class="title__wrapper">
+                        <h2 class="title">Программы</h2>
+                        <div class="under__title-wrapper">
+                            <h2 class="title under__title">тренировок</h2>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper programs-card-wrapper">
+                            <div class="swiper-slide programs-card programs-card-dark">
+                                <div class="programs-card-header programs-card-header-light">
+                                    <div class="programs-card-title-wrapper">
+                                        <h3 class="programs-card-header-text">группы 3-6 лет</h3>
+                                        <p class="programs-card-header-subtext"></p>
+                                    </div>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">абонимент футбол</h3>
+                                            <p class="programs-card-subtitle"></p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях ребёнок в игровой форме:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item">научится начальной технике владения мячом</li>
+                                                <li class="info-list-item info-list-programs-item">улучшит свои координационные способности</li>
+                                                <li class="info-list-item info-list-programs-item">получит навыки взаимодействия в команде</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group">Количество детей в группе 10 человек</p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">4250 р.</span>\ в месяц 2 раз/нед </p>
+                                                <p class="programs-card-price-text"><span class="bold">4950 р.</span>\ в месяц 3 раз/нед </p>
+                                            </div>
+                                            <button class="btn__link">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide programs-card programs-card-dark">
+                                <div class="programs-card-header programs-card-header-light">
+                                    <h3 class="programs-card-header-text">группы 7-9 лет</h3>
+                                    <p class="programs-card-header-subtext">(начальной подготовки)</p>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">абонимент футбол</h3>
+                                            <p class="programs-card-subtitle"></p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях ребёнок:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item">научится тактической подготовке</li>
+                                                <li class="info-list-item info-list-programs-item">изучит новые приёмы: выбор свободного места, «открывание», «закрывание», угловые удары, штрафные и свободные удары, персональная опека, двигательная защита, взаимодействие игроков в линии защиты, атаки, в середине поля</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group">Количество детей в группе 12 человек</p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">4250 р.</span>\ в месяц 2 раз/нед </p>
+                                                <p class="programs-card-price-text"><span class="bold">4950 р.</span>\ в месяц 3 раз/нед </p>
+                                            </div>
+                                            <button class="btn__link">Записаться</button>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="swiper-slide programs-card programs-card-dark">
+                                <div class="programs-card-header programs-card-header-light">
+                                    <h3 class="programs-card-header-text">группы 10-14 лет</h3>
+                                    <p class="programs-card-header-subtext">(учебно-тренировочные)</p>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">абонимент футбол</h3>
+                                            <p class="programs-card-subtitle"></p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях изучат:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item">технику ведения и отбор мяча</li>
+                                                <li class="info-list-item info-list-programs-item">технику перемещения без мяча</li>
+                                                <li class="info-list-item info-list-programs-item">прием и обработка мяча</li>
+                                                <li class="info-list-item info-list-programs-item">удар головой</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group">Количество детей в группе 15 человек</p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">4250 р.</span>\ в месяц 2 раз/нед </p>
+                                                <p class="programs-card-price-text"><span class="bold">4950 р.</span>\ в месяц 3 раз/нед </p>
+                                            </div>
+                                            <button class="btn__link">Записаться</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide programs-card programs-card-light">
+                                <div class="programs-card-header programs-card-header-dark">
+                                    <h3 class="programs-card-header-text">группы 7-14 лет</h3>
+                                    <p class="programs-card-header-subtext"></p>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">Индивидуальные тренировки для футболистов </h3>
+                                            <p class="programs-card-subtitle">(отработка финтов, ударов, передач, СФП и т.д)</p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях ребёнок:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">научится начальной технике владения мячом</li>
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">улучшит свои координационные способности</li>
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">получит навыки взаимодействия в команде</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group"></p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">1200 р.</span>\ тренировка</p>
+                                            </div>
+                                            <button class="btn__link btn__link-dark">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide programs-card programs-card-light">
+                                <div class="programs-card-header programs-card-header-dark">
+                                    <h3 class="programs-card-header-text">группы 7-14 лет</h3>
+                                    <p class="programs-card-header-subtext"></p>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">Индивидуальные тренировки вратарей</h3>
+                                            <p class="programs-card-subtitle"></p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях ребёнок:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">научится гибко менять тактическую схему игры</li>
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">воспитание умений контактировать и противодействовать контратакам соперникам</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group"></p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">1200 р.</span>\ тренировка</p>
+                                            </div>
+                                            <button class="btn__link btn__link-dark">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide programs-card programs-card-light">
+                                <div class="programs-card-header programs-card-header-dark">
+                                    <h3 class="programs-card-header-text">Тренировки сборных команд</h3>
+                                    <p class="programs-card-header-subtext"></p>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">Тренировки сборных команд</h3>
+                                            <p class="programs-card-subtitle"></p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях ребёнок:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">получит повышение работоспособности</li>
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">расширение их физических возможностей</li>
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">поддержание высокой физической готовности спортсменов высшего мастерства</li>
+                                                <li class="info-list-item info-list-programs-item info-list-programs-item-dark">осуществление подготовки всесторонне развитых юных спортсменов высокой квалификации для пополнения сборных команд края, города</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group">Количество детей в группе 15 человек</p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">1200 р.</span>\ тренировка</p>
+                                            </div>
+                                            <button class="btn__link btn__link-dark">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide programs-card programs-card-dark">
+                                <div class="programs-card-header programs-card-header-light">
+                                    <div class="programs-card-title-wrapper">
+                                        <h3 class="programs-card-header-text">Дошкольные Группы</h3>
+                                        <p class="programs-card-header-subtext"></p>
+                                    </div>
+                                </div>
+                                <div class="programs-card-content">
+                                    <div class="programs-card-content-top">
+                                        <div class="programs-card-title-wrapper">
+                                            <h3 class="programs-card-title">тренировка</h3>
+                                            <p class="programs-card-subtitle">(для юных спортсменов в детских садах)</p>
+                                        </div>
+                                        <div class="programs-card-list">
+                                            <p class="programs-card-list-title">На занятиях ребёнок получит:</p>
+                                            <ul class="info-list info-list-programs">
+                                                <li class="info-list-item info-list-programs-item">Физическое развитие</li>
+                                                <li class="info-list-item info-list-programs-item">Точность и координацию</li>
+                                                <li class="info-list-item info-list-programs-item">Самодисциплина</li>
+                                                <li class="info-list-item info-list-programs-item">Уверенность и самооценка</li>
+                                                <li class="info-list-item info-list-programs-item">Упорство и настойчивость</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="programs-card-content-bottom">
+                                        <p class="programs-card-info-group">Количество детей в группе 10 человек</p>
+                                        <div class="programs-card-price-wrapper">
+                                            <div class="programs-card-price">
+                                                <p class="programs-card-price-text"><span class="bold">4250 р.</span>\ в месяц 2 раз/нед </p>
+                                                <p class="programs-card-price-text"><span class="bold">4950 р.</span>\ в месяц 3 раз/нед </p>
+                                            </div>
+                                            <button class="btn__link">Записаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-btns">
+                            <div class="swiper-button-prev">
+                                <img src="./images/icons/prev-arrow.svg" alt="prev">
+                            </div>
+                            <div class="swiper-button-next">
+                                <img src="./images/icons/next-arrow.svg" alt="next">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="methodology">
+            <div class="small__container">
+                <div class="methodology-wrapper">
+                    <div class="title__wrapper">
+                        <h2 class="title">Авторская</h2>
+                        <div class="under__title-wrapper">
+                            <h2 class="title under__title under__title-border">Методика подготовки</h2>
+                        </div>
+                    </div>
+                    <div class="box__content__wrapper">
+                        <div class="box__content__left">
+                            <div class="box__small__item">
+                                <h3 class="box__item__title">Работа <br> на результат</h3>
+                                <p class="box__item__text">Акцент на прогресс футболиста относительно его собственных результатов, а не результатов других учеников</p>
+                                <img src="./images/bear-16.png" alt="bear" class="box__small__item__img">
+                            </div>
+                            <div class="box__small__item">
+                                <h3 class="box__item__title">Контакт <br> с родителями</h3>
+                                <p class="box__item__text">Близкий контакт с родителями, которые играют основную роль в становлении ребёнка как личности и как футболиста</p>
+                                <img src="./images/bear-51.png" alt="bear" class="box__small__item__img">
+                            </div>
+                        </div>
+                        <div class="box__content__right">
+                            <div class="box__big__item">
+                                <h3 class="box__item__title">Удовольствие</h3>
+                                <p class="box__item__text">Счастливый ребёнок - это воспитанник, который получает истинное удовольствие от занятий футболом.</p>
+                                <img src="./images/bear-10.png" alt="bear" class="box__big__item__img">
+                            </div>
+                        </div>
+                    </div>
+                    <img class="methodology-backround-img" src="./images/icons/line-s-dark-blue.svg" alt="line-s">
+                    <img class="methodology-backround-img-tactic" src="./images/icons/tactic.svg" alt="tactic">
+                </div>
+            </div>
+        </section>
+        <section class="guide">
+            <div class="small__container">
+                <div class="guide-wrapper">
+                    <div class="guide-top-content">
+                        <div class="title__wrapper">
+                            <h2 class="title">Тренера</h2>
+                            <div class="under__title-wrapper">
+                                <h2 class="title under__title">Руководство</h2>
+                            </div>
+                        </div>
+                        <a class="guide-top-btn">
+                            <p class="guide-top-btn-text">все тренера</p>
+                            <img src="./images/icons/long-arrow.svg" alt="arrow" class="guide-top-btn-img">
+                        </a>
+                    </div>
+                    <div class="guide-bottom-content">
+                        <div class="coach__wrapper">
+                            <div class="coach__card">
+                                <div class="coach__card__img__wrapper">
+                                    <img src="./images/coach-rog.png" alt="coach" class="coach__card__img">
+                                </div>
+                                <div class="coach__card__bottom__content">
+                                    <div class="coach__card__number__wrapper">
+                                        <p class="coach__card__number__text">1</p>
+                                    </div>
+                                    <div class="coach__card__name__wrapper">
+                                        <p class="coach__card__name">Роман</p>
+                                        <p class="coach__card__patronymic">Сергеевич</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coach__card">
+                                <div class="coach__card__img__wrapper">
+                                    <img src="./images/coach-lav.png" alt="coach" class="coach__card__img">
+                                </div>
+                                <div class="coach__card__bottom__content">
+                                    <div class="coach__card__number__wrapper">
+                                        <p class="coach__card__number__text">2</p>
+                                    </div>
+                                    <div class="coach__card__name__wrapper">
+                                        <p class="coach__card__name">Сергей</p>
+                                        <p class="coach__card__patronymic">Сергеевич</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coach__card">
+                                <div class="coach__card__img__wrapper">
+                                    <img src="./images/coach-kol.png" alt="coach" class="coach__card__img">
+                                </div>
+                                <div class="coach__card__bottom__content">
+                                    <div class="coach__card__number__wrapper">
+                                        <p class="coach__card__number__text">3</p>
+                                    </div>
+                                    <div class="coach__card__name__wrapper">
+                                        <p class="coach__card__name">Сергей</p>
+                                        <p class="coach__card__patronymic">Валерьевич</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="question">
+            <div class="small__container">
+                <div class="question-wrapper">
+                    <div class="title__wrapper">
+                        <h2 class="title title__light">Ворос</h2>
+                        <div class="under__title-wrapper">
+                            <h2 class="title under__title under__title__light">Ответ</h2>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Как записаться на футбол?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">По номеру в телеграмме +7(953)758-43-33 оставить заявку (ФИ ребёнка, г.р., номер телефона)</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Если мы нигде не тренировались, можем ли мы записаться в Академию «Арктика»?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">Да можете, мы принимаем на бесплатный просмотр всех с 3 до 14 лет. Ребенок будет определен в команду по возрасту и по месту проживания. Если ребёнок будет выполнять все задания, и будет дисциплинирован он обязательно будет заниматься у нас в Академии</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Принимает ли Ваша Академия девочек?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">Да принимает! У нас есть Женская Академия «Арктика» для девочек. Мы обучаем футболу не только мальчиков, но и девочек от 4 до 14 лет!</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Какие скидки на абонементы есть в Академии «Арктика»?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">В Академии «Арктика» действует скидка для многодетных семей и также, у кого 2 ребенка занимаются в Академии Арктика</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">В чём приходить на просмотр?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">На просмотр необходимо взять спортивную форму: футболка, шорты, спортивная обувь (бутсы, кеды или кроссовки). Когда ребёнок пройдёт просмотр, на тренировку необходимы будут бутсы для зала (с гладкой подошвой) или кеды без шипов. В кроссовках заниматься нельзя (в них не удобно будет выполнять упражнения с мячом, плохое сцепление с полом и достаточно скользко)</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Что необходимо из документов для посещения Академию «Арктика»?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">Копия свидетельства о рождении ребёнка, справка от терапевта о состоянии здоровья</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Сколько стоит Абонемент «Футбол»?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">Стоимость абонемента составляет 4250 рублей в месяц из расчета 2 тренировки в неделю</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-item-title">Можно ли у Вас заказать футбольную форму?</h3>
+                            <div class="accordion-content">
+                                <p class="accordion-content-text">Да можно, стоимость клубной формы «Арктика» 2950 р. (Футболка, трусы, гетры и нанесения логотипа Академии «Арктика», фамилия ребёнка и нанесение любимого номера спортсмена), также можно заказать набор футболиста сборной «Арктика» за 9900 р. (Футбольная форма, спортивный костюм, ветрозащитная куртка и рюкзак с нанесением Академии «Арктика»). Футбольная Экипировка нужна для тренировок и соревнований.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <div class="small__container">
+                <div class="form__wrapper">
+                    <div class="form__left__content">
+                        <div class="form__left__content-title-wrapper">
+                            <h2 class="form__left__content-title">Время пришло, чемпион.</h2>
+                        </div>
+                        <img src="./images/bear-10.png" alt="bear" class="form__left__content-img">
+                    </div>
+                    <div class="form__right__content">
+                        <div class="title__wrapper">
+                            <h2 class="title">запишись</h2>
+                            <div class="under__title-wrapper under__title-wrapper-form">
+                                <h2 class="title under__title under__title__form">на первое занятие</h2>
+                            </div>
+                        </div>
+                        <form class="form__content" action="">
+                            <input class="form__input" placeholder="Ваше имя" type="text">
+                            <input class="form__input" placeholder="+7" type="text">
+                            <input class="form__input" placeholder="Комментарий" type="text">
+                            <label>
+                                <input type="checkbox" name="form" class="real-checkbox">
+                                <span class="custom-checkbox"></span>
+                                <span class="form__text">Согласие на обработку персональных данных</span>
+                            </label>
+                            <button type="submit" class="btn__link btn__link-form">Записаться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <img src="./images/logo.png" alt="logo" class="logo-footer">
+                <nav class="footer-nav-wrapper">
+                    <ul class="footer-nav">
+                        <li class="footer-nav-item">
+                            <a href="#">О нас</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="#">Программы и цены</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="#">Отзывы</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="#">Фотогалерея</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="#">Расписание и отделения</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a href="#">Тренера</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-info">
+                    <p class="footer-info-title">Телефон:</p>
+                    <div class="footer-info-wrapper">
+                        <p class="footer-info-text">+7 (950) 895-55-45</p>
+                        <p class="footer-info-text">afm.arкtika@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p class="footer-info-title">Адрес:</p>
+                    <div class="footer-info-wrapper">
+                        <p class="footer-info-text">г. Мурманск,</p>
+                        <p class="footer-info-text">Кольский проспект, 53</p>
+                    </div>
+                    <div class="footer-socials">
+                        <img src="./images/icons/tg.svg" alt="vk" class="footer-social">
+                        <img src="./images/icons/tg.svg" alt="youtube" class="footer-social">
+                        <img src="./images/icons/tg.svg" alt="tg" class="footer-social">
+                    </div>
+                </div>
+                <div class="footer-link-wrapper">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer-link">Согласие на обработку данных</a>
+                    <div class="footer-link-img-wrapper">
+                        <img src="./images/icons/company-logo.svg" alt="company" class="footer-link-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

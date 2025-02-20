@@ -55,7 +55,10 @@ async function styles() {
 
     return src(path.styles.src)
         .pipe(plumber({ errorHandler: handleError }))
-        .pipe(sass({ silent: true }).on('error', sass.logError))
+        .pipe(sass({
+            includePaths: ['node_modules'],
+            silent: true
+        }).on('error', sass.logError))
         .pipe(sourcemaps.init())
         .pipe(autoprefixer.default({
             cascade: false,

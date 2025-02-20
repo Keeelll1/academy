@@ -173,8 +173,14 @@
     background-color: var(--light-blue);
     padding: 85px 0 90px 0;
 
+    .title__wrapper-advantages{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .under__title-advantages{
-        transform: rotate(-5deg);
+        border: none !important;
     }
 
     &-wrapper{
@@ -295,6 +301,17 @@
                 top: -20px;
                 transform: rotate(-15deg);
 
+                .avatar-wrapper{
+                    position: relative;
+
+                    .avatar-social{
+                        position: absolute;
+                        bottom: -2px;
+                        right: -5px;
+                        transform: rotate(15deg);
+                    }
+                }
+
                 &-name{
                     font-size: 11px;
                     font-weight: 700;
@@ -384,28 +401,378 @@
             font-size: 32px;
         }
 
-        .training-btn{
-            border: none;
-            background-color: var(--light-blue);
-            padding: 19px 96px;
-            color: var(--dark-blue);
+        .btn__link-training{
+            text-transform: inherit;
             font-size: 19px;
             font-weight: 800;
-            border-radius: 30px;
-            position: relative;
+        }
+    }
+}
 
-            &::after{
-                content: '';
-                position: absolute;
-                height: 20px;
-                width: 12px;
-                background-image: url('../images/icons/blue-arrow.svg');
-                background-position: center;
-                background-size: cover;
-                right: 25px;
-                top: 50%;
-                transform: translateY(-50%);
+.programs{
+    padding: 174px 0 77px 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 87px;
+
+        .programs-card-wrapper{
+            display: flex;
+            gap: 11px;
+
+            .programs-card{
+                max-width: 405px;
+                border-radius: 44px;
+                padding: 56px 32px 17px 32px;
+                position: relative;
+
+                &-dark{
+                    background-color: var(--dark-blue);
+                }
+
+                &-light{
+                    background-color: var(--light-blue);
+                    color: var(--dark-blue);
+                }
+
+                .programs-card-header{
+                    padding: 0 50px;
+                    width: fit-content;
+                    height: 60px;
+                    border-radius: 76px;
+                    transform: rotate(-5deg);
+                    position: absolute;
+                    top: -30px;
+                    left: 5px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    &-light{
+                        background-color: var(--light-blue);
+
+                    }
+
+                    &-dark{
+                        background-color: var(--dark-blue);
+
+                        .programs-card-header-text{
+                            color: var(--white);
+                        }
+                    }
+
+                    &-text{
+                        text-transform: uppercase;
+                        color: var(--dark-blue);
+                        font-size: 20px;
+                        line-height: 27px;
+                        font-weight: 400;
+                        font-family: 'Dela Gothic One';
+                    }
+
+                    &-subtext{
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 12px;
+                        font-family: 'Manrope';
+                        text-transform: uppercase;
+                        color: var(--dark-blue);
+                        text-align: end;
+                    }
+                }
+
+                .programs-card-content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    height: 100%;
+
+                    &-top{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 40px;
+
+                        .programs-card-title{
+                            text-transform: uppercase;
+                            font-family: 'Dela Gothic One';
+                            font-size: 21px;
+                            font-weight: 400;
+                            line-height: 20px;
+                        }
+
+                        .programs-card-list{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+
+                            &-title{
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: 19px;
+                            }
+
+                            .info-list-programs{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+
+                                &-item{
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 19px;
+                                    font-family: 'Manrope';
+
+                                    &-dark{                             
+                                        &::before{
+                                            background-image: url('../images/icons/dark-star.svg');
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    &-bottom{
+                        margin-top: auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 52px;
+
+                        .programs-card-info-group{
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 19px;
+                        }
+
+                        .programs-card-price-wrapper{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 27px;
+
+                            .programs-card-price{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+
+                                &-text{
+                                    font-weight: 400;
+                                    font-size: 20px;
+                                    line-height: 19px;
+
+                                    .bold{
+                                        font-size: 32px;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
+        }
+
+        .swiper{
+            overflow: visible;
+            max-width: 100%;
+
+            &-wrapper{
+                width: 100%;
+            }
+
+            &-slide{
+                height: auto;
+            }
+
+            .slider-btns {
+                position: absolute;
+                top: -190px;
+                width: 130px;
+                right: 0;
+                display: flex;
+                justify-content: space-between;
+                z-index: 10;
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                cursor: pointer;
+                }
+                
+                .swiper-button-prev::after,
+                .swiper-button-next::after {
+                display: none;
+                }
+
+                .swiper-button-next.swiper-button-disabled,
+                .swiper-button-prev.swiper-button-disabled{
+                    opacity: 1;
+                }
+            }
+
+            .swiper-pagination{
+                bottom: -25px;
+                display: none;
+
+                &-bullet{
+                    width: 7px;
+                    height: 7px;
+                    background-color: var(--dark-blue-opacity);
+
+                    &-active{
+                        background-color: var(--dark-blue);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.methodology{
+    background-color: var(--light-blue);
+    padding: 90px 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        position: relative;
+
+        .methodology-backround-img{
+            width: 553px;
+            height: 529px;
+            position: absolute;
+            top: 200px;
+            left: -200px;
+        }
+        .methodology-backround-img-tactic{
+            width: 553px;
+            height: 529px;
+            position: absolute;
+            top: 200px;
+            right: -200px;
+            z-index: 1;
+        }
+    }
+}
+
+.guide{
+    padding: 79px 0 85px 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+
+        .guide-top-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .guide-top-btn{
+                padding: 6px 28px;
+                background-color: var(--dark-blue);
+                border-radius: 105px;
+                display: flex;
+                gap: 22px;
+
+                &-text{
+                    font-family: 'Dela Gothic One';
+                    font-size: 22px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 51px;
+                }
+            }
+        }
+    }
+}
+
+.question{
+    background-color: var(--dark-blue);
+    padding: 88px 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .accordion{
+
+        .accordion-item{
+            position: relative;
+            padding: 18px 0;
+
+            &::before{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: var(--white);
+                position: absolute;
+                top: 0;
+            }
+
+            &:last-child::after{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: var(--white);
+                position: absolute;
+                bottom: 0;
+            }
+
+            &-title{
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 32px;
+                position: relative;
+                margin-left: 50px;
+                cursor: pointer;
+    
+                &::before{
+                    content: '';
+                    width: 19px;
+                    height: 19px;
+                    background-size: cover;
+                    position: absolute;
+                    left: -35px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-image: url('../images/icons/plus.svg');
+                    transition: 0.5s;
+                    transform-origin: center;
+                }
+            }
+        }
+
+        .accordion-content{
+            margin-left: 50px;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            overflow-y: auto;
+
+            &-text{
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 33px;
+            }
+        }
+
+        .accordion-item.accordion-active .accordion-content{
+            height: fit-content;
+            padding: 32px 0;
+        }
+
+        .accordion-item.accordion-active .accordion-item-title::before{
+            transform:  translateY(-50%) rotate(45deg);
         }
     }
 }
