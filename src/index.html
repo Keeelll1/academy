@@ -10,46 +10,88 @@
 </head>
 <body>
     <header class="header header-main">
-        <div class="header__inner container">
-            <a href="index.html" class="logo">
-                <img src="./images/logo.png" alt="logo" class="logo__img">
-                <p class="logo__text">Академия «Арктика» имени Г.А.Тетюрева</p>
-            </a>
-            <nav class="menu">
-                <ul class="menu__wrapper">
-                    <li class="menu__wrapper-item">
-                        <div class="dropdown">
-                            <a href="#">О нас</a>
-                            <img src="./images/icons/arrow.svg" alt="arrow" class="arrow">
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item">
-                                    <a href="#">О нас</a>
-                                </li>
-                                <li class="dropdown-menu-item">
-                                    <a href="#">Отзывы</a>
-                                </li>
-                                <li class="dropdown-menu-item">
-                                    <a href="#">Тренера</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="menu__wrapper-item">
-                        <a href="#">Программы и цены</a>
-                    </li>
-                    <li class="menu__wrapper-item">
-                        <a href="#">Фотогалерея</a>
-                    </li>
-                    <li class="menu__wrapper-item">
-                        <a href="">Расписание и отделения</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__content">
-                <a class="header__content-item header__content-item-social">
-                    <img src="./images/icons/tg.svg" alt="tg">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.png" alt="logo" class="logo__img">
+                    <p class="logo__text">Академия «Арктика» имени Г.А.Тетюрева</p>
                 </a>
-                <a class="header__content-item header__content-item-button">записаться</a>
+                <nav class="menu">
+                    <ul class="menu__wrapper">
+                        <li class="menu__wrapper-item">
+                            <div class="dropdown">
+                                <a href="#">О нас</a>
+                                <img src="./images/icons/arrow.svg" alt="arrow" class="arrow">
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">О нас</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">Отзывы</a>
+                                    </li>
+                                    <li class="dropdown-menu-item">
+                                        <a href="#">Тренера</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu__wrapper-item">
+                            <a href="#">Программы и цены</a>
+                        </li>
+                        <li class="menu__wrapper-item">
+                            <a href="#">Фотогалерея</a>
+                        </li>
+                        <li class="menu__wrapper-item">
+                            <a href="">Расписание и отделения</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__content">
+                    <a class="header__content-item header__content-item-social">
+                        <img src="./images/icons/tg.svg" alt="tg">
+                    </a>
+                    <button class="header__content-item header__content-item-button">записаться</button>
+                </div>
+                <div class="burger__menu">
+                    <div class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="burger__menu__content">
+                        <div class="burger__menu__content-wrapper">
+                            <nav class="navigation-wrapper">
+                                <ul class="navigation navigation__burger">
+                                    <li class="navigation-item burger__navigation__item">
+                                        <a href="#">О нас</a>
+                                    </li>
+                                    <li class="navigation-item burger__navigation__item">
+                                        <a href="#">Программы и цены</a>
+                                    </li>
+                                    <li class="navigation-item burger__navigation__item">
+                                        <a href="#">Отзывы</a>
+                                    </li>
+                                    <li class="navigation-item burger__navigation__item">
+                                        <a href="#">Фотогалерея</a>
+                                    </li>
+                                    <li class="navigation-item burger__navigation__item">
+                                        <a href="#">Расписание и отделения</a>
+                                    </li>
+                                    <li class="navigation-item burger__navigation__item">
+                                        <a href="#">Тренера</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header__content header__content__burger">
+                                <a class="header__content-item header__content-item-social">
+                                    <img src="./images/icons/tg.svg" alt="tg">
+                                </a>
+                                <button class="header__content-item header__content-item-button">записаться</button>
+                            </div>
+                            <img src="./images/icons/cross.svg" alt="cross" class="cross__burger__menu">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -60,8 +102,11 @@
                     <div class="info-content-left">
                         <div class="info-text-wrapper">
                             <h1 class="title-global">Растим Чемпионов!</h1>
+                            <div class="info-content-right info-content-right-mobile">
+                                <img src="./images/bear-info.png" alt="bear" class="info-content-right-img">
+                            </div>
                             <div class="info-list-wrapper">
-                                <p class="info-subtitle">Играй ради удовольствия и карьеры</p>
+                                <p class="info-subtitle">Играй ради удовольствия и карьеры!</p>
                                 <ul class="info-list">
                                     <li class="info-list-item">№1 в Мурманской области</li>
                                     <li class="info-list-item">Набор от 3 до 21 года</li>
@@ -107,10 +152,13 @@
         <section class="advantages">
             <div class="advantages-wrapper container">
                 <div class="title__wrapper title__wrapper-advantages">
-                    <h2 class="title">наши</h2>
-                    <h2 class="title under__title under__title-advantages">преимущества</h2>
+                    <h2 class="title">Программы</h2>
+                    <div class="under__title-wrapper">
+                        <h2 class="title under__title under__title-border">тренировок</h2>
+                    </div>
                 </div>
                 <div class="advantages-content">
+                    <img src="./images/avantages-mobile.png" alt="advantages" class="advantages-mobile-img">
                     <img src="./images/advantages.png" alt="advantages" class="advantages-img">
                     <img src="./images/bear-16.png" alt="bear" class="advantages-bear">
                 </div>
@@ -146,9 +194,11 @@
         <section class="training">
             <div class="training-wrapper container">
                 <div class="training-content">
-                    <h2 class="training-title">пробная тренировка</h2>
-                    <div class="training-bottom-content">
+                    <div class="training-text-wrapper">
+                        <h2 class="training-title">пробная тренировка</h2>
                         <p class="training-text">приходи</p>
+                    </div>
+                    <div class="training-bottom-content">
                         <button class="btn__link btn__link-training">Запишись на футбол</button>
                         <img src="./images/bear-51.png" alt="bear" class="training-bear">
                     </div>
@@ -505,6 +555,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <a href="#" class="coach__card coach__card__btn">
+                                <p class="coach-btn-text">все тренера</p>
+                                <img src="./images/icons/long-arrow.svg" alt="arrow" class="coach-btn-img">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -582,7 +636,7 @@
                         <img src="./images/bear-10.png" alt="bear" class="form__left__content-img">
                     </div>
                     <div class="form__right__content">
-                        <div class="title__wrapper">
+                        <div class="title__wrapper title__wrapper-center">
                             <h2 class="title">запишись</h2>
                             <div class="under__title-wrapper under__title-wrapper-form">
                                 <h2 class="title under__title under__title__form">на первое занятие</h2>
@@ -608,24 +662,24 @@
         <div class="container">
             <div class="footer-wrapper">
                 <img src="./images/logo.png" alt="logo" class="logo-footer">
-                <nav class="footer-nav-wrapper">
-                    <ul class="footer-nav">
-                        <li class="footer-nav-item">
+                <nav class="navigation-wrapper">
+                    <ul class="navigation">
+                        <li class="navigation-item">
                             <a href="#">О нас</a>
                         </li>
-                        <li class="footer-nav-item">
+                        <li class="navigation-item">
                             <a href="#">Программы и цены</a>
                         </li>
-                        <li class="footer-nav-item">
+                        <li class="navigation-item">
                             <a href="#">Отзывы</a>
                         </li>
-                        <li class="footer-nav-item">
+                        <li class="navigation-item">
                             <a href="#">Фотогалерея</a>
                         </li>
-                        <li class="footer-nav-item">
+                        <li class="navigation-item">
                             <a href="#">Расписание и отделения</a>
                         </li>
-                        <li class="footer-nav-item">
+                        <li class="navigation-item">
                             <a href="#">Тренера</a>
                         </li>
                     </ul>

@@ -7,11 +7,19 @@
 .container{
     max-width: 1462px;
     margin: 0 auto;
+
+    @media (max-width: 1470px){
+        padding: 0 15px;
+    }
 }
 
 .small__container{
     max-width: 1240px;
     margin: 0 auto;
+
+    @media (max-width: 1250px){
+        padding: 0 15px;
+    }
 }
 
 .title__wrapper{
@@ -27,6 +35,14 @@
         border-radius: 105px;
         background-color: var(--dark-blue);
         width: fit-content;
+
+        @media(max-width: 1170px){
+            font-size: 40px;
+        }
+
+        @media(max-width: 600px){
+            font-size: 30px;
+        }
 
         &__light{
             background-color: var(--light-blue);
@@ -52,6 +68,14 @@
             width: fit-content;
             transform: rotate(-5deg);
             border: 4px solid var(--light-blue);
+
+            @media(max-width: 1170px){
+                font-size: 26px !important;
+            }
+
+            @media(max-width: 600px){
+                font-size: 26px !important;
+            }
 
             &__light{
                 color: var(--white);
@@ -83,6 +107,10 @@
     border-radius: 30px;
     position: relative;
     text-transform: uppercase;
+
+    @media (max-width: 360px){
+        padding: 19px 0;
+    }
 
     &-form{
         margin-top: 55px;
@@ -116,6 +144,10 @@
     display: flex;
     gap: 50px;
 
+    @media(max-width: 900px){
+        flex-direction: column-reverse;
+    }
+
     .box__content__left{
         display: flex;
         flex-direction: column;
@@ -131,7 +163,11 @@
             color: var(--black);
             border-radius: 44px;
             z-index: 1;
-            width: 574px;
+
+            @media(max-width: 550px){
+                padding-left: 133px;
+                padding-right: 19px;
+            }
 
             &::before{
                 content: '';
@@ -164,6 +200,14 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
+
+                @media(max-width: 550px){
+                    width: 184px;
+                    height: 184px;
+                    left: -30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
         }
 
@@ -187,6 +231,10 @@
             justify-content: flex-end;
             position: relative;
             z-index: 2;
+
+            @media(max-width: 360px){
+                padding-top: 216px;
+            }
 
             &::before{
                 content: '';
@@ -216,6 +264,26 @@
             &__img{
                 position: absolute;
                 top: -70px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media(max-width: 1000px){
+                    top: 0;
+                }
+
+                @media(max-width: 870px){
+                    top: -70px;
+                }
+
+                @media(max-width: 600px){
+                    width: 400px;
+                    top: 0;
+                }
+
+                @media(max-width: 360px){
+                    width: 242px;
+                    top: -20px;
+                }
             }
         }
     }
@@ -225,12 +293,20 @@
         font-weight: 700;
         line-height: 31px;
         text-transform: uppercase;
+
+        @media(max-width: 600px){
+            font-size: 20px;
+        }
     }
 
     .box__item__text{
         font-size: 18px;
         font-weight: 400;
         line-height: 25px;
+
+        @media(max-width: 600px){
+            font-size: 15px;
+        }
     }
 }
 
@@ -244,11 +320,40 @@
         display: flex;
         flex-direction: column;
         border-radius: 35px;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
         overflow: hidden;
+
+        &__btn{
+            background-color: var(--dark-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            .coach-btn-text{
+                font-family: 'Dela Gothic One';
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
         
         &__img__wrapper{
-            height: 373px;
-            
+            max-height: 373px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            .coach__card__img{
+                object-fit: cover;
+                width: 350px;
+            }
+        
+            @media(max-width: 1250px){
+
+            }
+        
         }
 
         &__bottom__content{
@@ -310,6 +415,10 @@
                 position: relative;
                 z-index: 0;
 
+                @media(max-width: 1250px){
+                    width: 290px;
+                }
+
                 .coach__card__name{
                     font-size: 20px;
                     font-weight: 700;
@@ -354,21 +463,52 @@
         display: flex;
         gap: 23px;
 
+        @media(max-width: 900px){
+            flex-direction: column;
+            align-items: center;
+            gap: 260px;
+        }
+
         .form__left__content{
             width: calc(614 / 1240 * 100%);
             position: relative;
+
+            @media(max-width: 900px){
+                width: 80%;
+            }
+
+            @media(max-width: 532px){
+                width: 100%;
+            }
 
             &-img{
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
                 top: 100px;
+
+                @media(max-width: 1070px){
+                    top: 150px;
+                }
+
+                @media(max-width: 900px){
+                    top: 70px;
+                    width: 328px;
+                }
+
+                @media(max-width: 532px){
+                    top: 120px;
+                }
             }
 
             &-title-wrapper{
                 padding: 28px 173px 30px 50px;
                 background-color: var(--dark-blue);
                 border-radius: 35px;
+
+                @media(max-width: 900px){
+                    padding-right: 40px;
+                }
 
                 .form__left__content-title{
                     font-family: 'Dela Gothic One';
@@ -387,6 +527,27 @@
             display: flex;
             flex-direction: column;
             gap: 45px;
+
+            .title__wrapper-center{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @media(max-width: 1070px){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @media(max-width: 900px){
+                width: 80%;
+            }
+
+            @media(max-width: 532px){
+                width: 100%;
+            }
 
             .form__content{
                 display: flex;
@@ -453,5 +614,15 @@
                 }
             }
         }
+    }
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+
+    &-item{
+        font-weight: 700;
+        line-height: 30px;
     }
 }

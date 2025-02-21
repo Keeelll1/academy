@@ -12,6 +12,7 @@
   font-weight: 400;
   font-family: "Manrope", serif;
   overflow-x: hidden;
+  position: relative;
  }
 
  html{
@@ -62,6 +63,12 @@
    margin-left: 0;
    padding: 0;
    border: none;
+ }
+
+ button{
+  border: none;
+  color: inherit;
+  outline: none;
  }
  
  /**
