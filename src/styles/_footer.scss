@@ -29,9 +29,9 @@
                 gap: 70px;
             }
 
-            @media(max-width: 360px){
+            @media(max-width: 500px){
                 flex-wrap: wrap;
-                gap: 70px;
+                gap: 50px;
             }
 
             .navigation-footer-item{
@@ -43,7 +43,7 @@
                     font-size: 16px;
                 }
 
-                @media(max-width: 360px){
+                @media(max-width: 500px){
                     width: 90px;
                     font-size: 13px;
                 }
