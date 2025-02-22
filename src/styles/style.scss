@@ -320,146 +320,101 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 17px;
 
+    @media (max-width: 820px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .coach__card{
         background-color: var(--light-blue);
-        display: flex;
-        flex-direction: column;
-        border-radius: 35px;
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-        overflow: hidden;
+        border-radius: 37px;
 
-        &__btn{
-            background-color: var(--dark-blue);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
+        &-top-content{
+            max-height: 375px;
+            overflow: hidden;
 
-            .coach-btn-text{
-                font-family: 'Dela Gothic One';
-                font-size: 14px;
-                font-weight: 400;
-                text-transform: uppercase;
-            }
-        }
-        
-        &__img__wrapper{
-            max-height: 373px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-
-            .coach__card__img{
+            .coach__card-img{
                 object-fit: cover;
-                width: 350px;
+                object-position: top center;
+                aspect-ratio: 1 / 1;
             }
-        
-            @media(max-width: 1250px){
-
-            }
-        
         }
 
-        &__bottom__content{
+        &-bottom-content{
+            background-color: var(--dark-blue);
+            border-bottom-right-radius: 37px;
+            border-bottom-left-radius: 37px;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            text-align: center;
 
-            .coach__card__number__wrapper{
-                padding: 30px 40px 30px 40px;
-                border-top-right-radius: 42px;
-                border-bottom-left-radius: 42px;
-                border-bottom-right-radius: 42px;
-                background-color: var(--light-blue);
-                position: relative;
-                z-index: 0;
-
-                &::before{
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background-color: var(--white);
-                    bottom: 0;
-                    left: 0;
-                    border-top-right-radius: 42px;
-                    z-index: -1;
-                }
-
-                &::after{
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    background-color: var(--light-blue);
-                    bottom: 0;
-                    left: 0;
-                    border-top-right-radius: 42px;
-                    border-bottom-right-radius: 42px;
-                    z-index: -1;
-                }
-
-                .coach__card__number__text{
-                    font-size: 42px;
-                    font-weight: 700;
-                    color: var(--dark-blue);
-                    line-height: 28px;
-                }
+            @media (max-width: 500px){
+                padding: 10px 0;
             }
 
-            .coach__card__name__wrapper{
+            @media (max-width: 420px){
+                padding: 5px 0;
+            }
+
+            .coach__card-text{
+                font-size: 36px;
+                font-weight: 700;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                padding: 15px 51px;
-                background-color: var(--dark-blue);
-                width: 100%;
-                border-radius: 37px;
-                justify-content: center;
-                height: fit-content;
-                position: relative;
-                z-index: 0;
+                line-height: 1;
 
-                @media(max-width: 1250px){
-                    width: 290px;
+                @media (max-width: 1000px){
+                    font-size: 30px;
                 }
 
-                .coach__card__name{
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 16px;
-                }
-
-                .coach__card__patronymic{
+                @media (max-width: 820px){
                     font-size: 36px;
-                    font-weight: 700;
-                    line-height: 30px;
-                    max-width: 200px;
                 }
 
-                &::before{
-                    content: '';
-                    height: 120%;
-                    width: 100%;
-                    position: absolute;
-                    background-color: var(--white);
-                    z-index: -1;
-                    border-top-left-radius: 37px;
-                    border-top-right-radius: 37px;
+                @media (max-width: 570px){
+                    font-size: 30px;
                 }
-                &::after{
-                    content: '';
-                    height: 100%;
-                    width: 95%;
-                    position: absolute;
-                    background-color: var(--dark-blue);
-                    z-index: -1;
-                    border-radius: 37px;
+
+                @media (max-width: 500px){
+                    font-size: 20px;
+                }
+
+                @media (max-width: 420px){
+                    font-size: 14px;
+                }
+
+                .coach__card-name{
+                    font-size: 20px;
+                    line-height: 16px;
+                    line-height: 1;
+                    display: inline;
+
+                    @media (max-width: 1000px){
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 820px){
+                        font-size: 20px;
+                    }
+
+                    @media (max-width: 570px){
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 500px){
+                        font-size: 14px;
+                    }
+
+                    @media (max-width: 420px){
+                        font-size: 10px;
+                    }
                 }
             }
         }
     }
 }
+
 
 .form{
     padding: 75px 0 125px 0;

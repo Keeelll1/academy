@@ -1020,12 +1020,51 @@
                 display: flex;
                 gap: 22px;
 
+                @media (max-width: 820px){
+                    display: none;
+                }
+
                 &-text{
                     font-family: 'Dela Gothic One';
                     font-size: 22px;
                     font-weight: 400;
                     text-transform: uppercase;
                     line-height: 51px;
+                }
+            }
+        }
+
+        .coach__card__btn{
+            background-color: var(--dark-blue) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: none;
+            gap: 12px;
+
+            @media(max-width: 820px){
+                display: flex;
+            }
+
+            .coach-btn-text{
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 20px;
+                font-family: 'Dela Gothic One';
+
+                @media (max-width: 500px){
+                    font-size: 18px;
+                }
+
+                @media (max-width: 420px){
+                    font-size: 14px;
+                }
+            }
+
+            .coach-btn-img{
+                @media (max-width: 500px){
+                    width: 50px;
                 }
             }
         }
