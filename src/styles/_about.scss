@@ -1,0 +1,400 @@
+.founder{
+    padding-bottom: 78px;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+
+        .founder-content-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .founder-content-top{
+                display: flex;
+                gap: 20px;
+
+                &-left{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: calc(466 / 1240 * 100%);
+
+                    .founder-content-top-img-wrapper{
+                        height: 466px;
+                        background-color: var(--light-blue);
+                        border-radius: 43px;
+                        overflow: hidden;
+                        aspect-ratio: 1 / 1;
+
+                        .founder-content-top-img{
+                            object-fit: cover;
+                            object-position: -10px -40px;
+                            width: 440px;
+                        }
+                    }
+
+                    .founder-content-top-name{
+                        background-color: var(--dark-blue);
+                        padding: 10px 110px;
+                        border-radius: 37px;
+
+                        &-text{
+                            font-size: 20px;
+                            font-weight: 700;
+                            text-align: center;
+                            line-height: 30px;
+
+                            & span{
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                }
+
+                &-right{
+                    width: calc(748 / 1240 * 100%);
+                    background-color: var(--dark-blue);
+                    border-radius: 44px;
+                    padding: 66px 19px 94px 44px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    &-text{
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .info-list-founder{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        
+                        .founder-content-top-right-list{
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            .founder-content-middle{
+                background-color: var(--light-blue);
+                padding: 21px 82px;
+                border-radius: 44px;
+                overflow-y: scroll;
+                scrollbar-width: none;
+                display: flex;
+                align-items: center;
+                gap: 28px;
+
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+
+                .founder-content-middle-img-wrapper{
+                    aspect-ratio: 1 / 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .founder-content-middle-img{
+                        object-fit: cover;
+                        min-height: 132px;
+                        min-width: 132px;
+
+                        &-horizontal{
+                            min-width: 191px;
+                        }
+                    }
+                }
+            }
+
+            .founder-content-bottom{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 17px;
+
+                &-item{
+                    background-color: var(--dark-blue);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 41px 0;
+                    border-radius: 44px;
+
+                    &-text{
+                        font-size: 26px;
+                        font-weight: 400;
+                        line-height: 30px;
+
+                        & span{
+                            font-family: 'Dela Gothic One';
+                            font-size: 48px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.academy{
+    padding: 90px 0 70px 0;
+    background-color: var(--light-blue);
+    position: relative;
+    z-index: 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .academy-img-line{
+        position: absolute;
+        top: 7%;
+        left: 0;
+        z-index: -1;
+    }
+
+    .academy-img-tactic{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.memory{
+    padding: 80px 0;
+
+    &-wrapper{
+        display: flex;
+        gap: 30px;
+
+        .memory-left-content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: calc(578 / 1240 * 100%);
+    
+            &-title{
+                background-color: var(--light-blue);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 35px;
+                padding: 31px 0;
+    
+                .memory-left-content-text{
+                    font-family: 'Dela Gothic One';
+                    font-size: 32px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: var(--dark-blue);
+                }
+            }
+    
+            &-img-wrapper{
+                height: 500px;
+                aspect-ratio: 1 / 1;
+                overflow: hidden;
+                border-radius: 44px;
+    
+                .memory-left-content-img{
+                    object-fit: cover;
+                    object-position: center -15px;
+                }
+            }
+        }
+
+        .memory-right-content{
+            width: calc(644 / 1240 * 100%);
+            background-color: var(--dark-blue);
+            border-radius: 44px;
+            padding: 61px 85px 90px 85px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            &-text{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+
+                & span{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.merits{
+    padding: 85px 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .merits-content-wrapper{
+        height: 900px;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+
+        .merits-content-item-wrapper{
+            position: absolute;
+
+            &-first{
+                top: 20px;
+                left: 10%;
+            }
+
+            &-second{
+                top: 0;
+                right: 5%;
+            }
+
+            &-third{
+                top: 300px;
+                left: 0;
+            }
+
+            &-four{
+                top: 250px;
+                right: 0;
+            }
+
+            &-five{
+                bottom: 0;
+                left: 15%;
+            }
+
+            &-six{
+                bottom: 10%;
+                right: 5%;
+            }
+
+            .merits-content-item{
+                padding: 71px 33px 41px 33px;
+                position: relative;
+    
+                &-text{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 19px;
+                    max-width: 375px;
+                }
+    
+                &-light{
+                    background-color: var(--light-blue);
+                    border-radius: 44px;
+                    width: fit-content;
+    
+                    .merits-content-item-text{
+                        color: var(--dark-blue);
+                    }
+                }
+
+                &-dark{
+                    background-color: var(--dark-blue);
+                    border-radius: 44px;
+                    width: fit-content;
+    
+                    .merits-content-item-text{
+                        color: var(--white);
+                    }
+                }
+
+                .merits-content-item-num-wrapper{
+                    padding: 20px 25px;
+                    border-radius: 76px;
+                    width: fit-content;
+                    position: absolute;
+                    left: 10px;
+                    top: -15px;
+                    transform: rotate(-5deg);
+
+                    .merits-content-item-num{
+                        font-family: 'Dela Gothic One';
+                        font-size: 38px;
+                        font-weight: 400;
+                        line-height: 19px;
+                    }
+
+                    &-dark{
+                        background-color: var(--dark-blue);
+
+                        .merits-content-item-num{
+                            color: var(--white);
+                        }
+                    }
+
+                    &-light{
+                        background-color: var(--light-blue);
+
+                        .merits-content-item-num{
+                            color: var(--dark-blue);
+                        }
+                    }
+                }
+            }
+        }
+
+        .merits-img{
+            width: 540px;
+            height: 540px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-10deg);
+            z-index: 2;
+        }
+    }
+}
+
+.partner{
+    background-color: var(--dark-blue);
+    padding: 75px 0 110px 0;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 78px;
+
+        .title-partner{
+            font-size: 32px !important;
+            border: 4px solid var(--white);   
+        }
+
+        .partner-content{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 132px;
+            row-gap: 17px;
+
+            &-item{
+                width: 210px;
+                height: 210px;
+                aspect-ratio: 1 / 1;
+                background-color: var(--dark-blue);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &-img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

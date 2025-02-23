@@ -74,6 +74,11 @@
                 flex-direction: column;
                 gap: 10px;
 
+                &-wrapper{
+                    display: flex;
+                    flex-direction: column;
+                }
+
                 &-title{
                     font-weight: 700;
                     line-height: 30px;

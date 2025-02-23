@@ -67,25 +67,13 @@
         gap: 20px;
     }
 
-    &-list-item{
+    .item-text{
         max-width: 300px;
         font-size: 20px;
         font-weight: 400;
-        padding-left: 32px;
-        position: relative;
 
         @media(max-width: 800px){
             font-size: 15px;
-        }
-
-        &::before{
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-image: url('../images/icons/Star.svg');
-            left: 0;
-            top: 3px;
         }
     }
 
