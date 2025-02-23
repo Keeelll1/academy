@@ -15,29 +15,71 @@
                 display: flex;
                 gap: 20px;
 
+                @media(max-width: 800px){
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 &-left{
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
                     width: calc(466 / 1240 * 100%);
 
+                    @media(max-width: 800px){
+                        width: 70%;
+                    }
+
+                    @media(max-width: 600px){
+                        width: 100%;
+                    }
+
                     .founder-content-top-img-wrapper{
-                        height: 466px;
+                        max-height: 466px;
                         background-color: var(--light-blue);
                         border-radius: 43px;
                         overflow: hidden;
                         aspect-ratio: 1 / 1;
+                        display: flex;
+                        justify-content: center;
+
+                        @media(max-width: 450px){
+                            height: 328px;
+                        }
 
                         .founder-content-top-img{
                             object-fit: cover;
-                            object-position: -10px -40px;
+                            object-position: 0 -40px;
                             width: 440px;
+
+                            @media(max-width: 1180px){
+                                width: 350px;
+                            }
+
+                            @media(max-width: 900px){
+                                object-position: 0px -40px;
+                                width: 300px;
+                            }
+
+                            @media(max-width: 800px){
+                                width: 80%;
+                            }
+
+                            @media(max-width: 600px){
+                                width: 90%;
+                            }
+
+                            @media(max-width: 450px){
+                                object-position: 0 -30px;
+                                width: 80%;
+                            }
                         }
                     }
 
                     .founder-content-top-name{
                         background-color: var(--dark-blue);
-                        padding: 10px 110px;
+                        padding: 10px 0;
+                        width: 100%;
                         border-radius: 37px;
 
                         &-text{
@@ -46,8 +88,21 @@
                             text-align: center;
                             line-height: 30px;
 
+                            @media(max-width: 1000px){
+                                font-size: 18px;
+                                line-height: 25px;
+                            }
+
+                            @media(max-width: 850px){
+                                font-size: 16px;
+                            }
+
                             & span{
                                 font-size: 36px;
+
+                                @media(max-width: 1000px){
+                                    font-size: 25px;
+                                }
                             }
                         }
                     }
@@ -62,51 +117,96 @@
                     flex-direction: column;
                     justify-content: space-between;
 
+                    @media(max-width: 1150px){
+                        padding: 46px 22px 60px 22px;
+                    }
+
+                    @media(max-width: 950px){
+                        padding: 20px 22px;
+                    }
+
+                    @media(max-width: 800px){
+                        width: 70%;
+                        padding: 46px 22px 60px 22px;
+                    }
+
+                    @media(max-width: 600px){
+                        width: 100%;
+                    }
+
                     &-text{
                         font-size: 18px;
                         font-weight: 500;
+
+                        @media(max-width: 1100px){
+                           font-size: 16px;
+                        }
+
+                        @media(max-width: 1000px){
+                            font-size: 15px;
+                        }
                     }
 
                     .info-list-founder{
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
+
+                        @media(max-width: 1000px){
+                            gap: 5px;
+                        }
                         
                         .founder-content-top-right-list{
                             font-size: 18px;
                             font-weight: 700;
+
+                            @media(max-width: 1100px){
+                                font-size: 16px;
+                            }
+
+                            @media(max-width: 1000px){
+                                font-size: 15px;
+                            }
                         }
                     }
                 }
             }
 
-            .founder-content-middle{
+            .founder-content-middle-wrapper{
                 background-color: var(--light-blue);
                 padding: 21px 82px;
                 border-radius: 44px;
-                overflow-y: scroll;
-                scrollbar-width: none;
-                display: flex;
-                align-items: center;
-                gap: 28px;
+                overflow: hidden;
 
-                &::-webkit-scrollbar{
-                    display: none;
+                @media(max-width: 600px){
+                    padding: 30px 18px;
                 }
 
-                .founder-content-middle-img-wrapper{
-                    aspect-ratio: 1 / 1;
+                .founder-content-middle{
+                    overflow-y: scroll;
+                    scrollbar-width: none;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    gap: 28px;
 
-                    .founder-content-middle-img{
-                        object-fit: cover;
-                        min-height: 132px;
-                        min-width: 132px;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
 
-                        &-horizontal{
-                            min-width: 191px;
+                    .founder-content-middle-img-wrapper{
+                        aspect-ratio: 1 / 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .founder-content-middle-img{
+                            object-fit: cover;
+                            min-height: 132px;
+                            min-width: 132px;
+
+                            &-horizontal{
+                                min-width: 191px;
+                            }
                         }
                     }
                 }
@@ -117,6 +217,14 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 17px;
 
+                @media(max-width: 700px){
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @media(max-width: 600px){
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
                 &-item{
                     background-color: var(--dark-blue);
                     display: flex;
@@ -126,15 +234,36 @@
                     padding: 41px 0;
                     border-radius: 44px;
 
+                    @media(max-width: 600px){
+                        padding: 20px 0;
+                        border-radius: 23px;
+                    }
+
                     &-text{
                         font-size: 26px;
                         font-weight: 400;
                         line-height: 30px;
 
+                        @media(max-width: 950px){
+                            font-size: 20px;
+                        }
+
+                        @media(max-width: 600px){
+                            font-size: 14px;
+                        }
+
                         & span{
                             font-family: 'Dela Gothic One';
                             font-size: 48px;
                             font-weight: 400;
+
+                            @media(max-width: 950px){
+                                font-size: 40px;
+                            }
+
+                            @media(max-width: 600px){
+                                font-size: 25px;
+                            }
                         }
                     }
                 }
@@ -177,11 +306,24 @@
         display: flex;
         gap: 30px;
 
+        @media(max-width: 850px){
+            flex-direction: column;
+            align-items: center;
+        }
+
         .memory-left-content{
             display: flex;
             flex-direction: column;
             gap: 20px;
             width: calc(578 / 1240 * 100%);
+
+            @media(max-width: 850px){
+                width: 80%;
+            }
+
+            @media(max-width: 600px){
+                width: 100%;
+            }
     
             &-title{
                 background-color: var(--light-blue);
@@ -190,6 +332,10 @@
                 align-items: center;
                 border-radius: 35px;
                 padding: 31px 0;
+
+                @media(max-width: 500px){
+                    padding: 17px 0;
+                }
     
                 .memory-left-content-text{
                     font-family: 'Dela Gothic One';
@@ -197,6 +343,14 @@
                     font-weight: 400;
                     text-transform: uppercase;
                     color: var(--dark-blue);
+
+                    @media(max-width: 850px){
+                        font-size: 25px;
+                    }
+
+                    @media(max-width: 500px){
+                        font-size: 20px;
+                    }
                 }
             }
     
@@ -205,6 +359,14 @@
                 aspect-ratio: 1 / 1;
                 overflow: hidden;
                 border-radius: 44px;
+
+                @media(max-width: 850px){
+                    height: 400px;
+                }
+
+                @media(max-width: 500px){
+                    height: 325px;
+                }
     
                 .memory-left-content-img{
                     object-fit: cover;
@@ -221,11 +383,28 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            @media(max-width: 1150px){
+                padding: 45px 22px;
+            }
+
+            @media(max-width: 850px){
+                width: 80%;
+                gap: 20px;
+            }
+
+            @media(max-width: 600px){
+                width: 100%;
+            }
             
             &-text{
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 28px;
+
+                @media(max-width: 500px){
+                    font-size: 15px;
+                }
 
                 & span{
                     font-weight: 700;
@@ -250,8 +429,34 @@
         position: relative;
         z-index: 0;
 
+            @media(max-width: 1150px){
+                height: 800px;
+            }
+
+            @media(max-width: 1000px){
+                height: fit-content;
+                gap: 25px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media(max-width: 1000px){
+                grid-template-columns: repeat(1, 1fr);
+            }
+        
         .merits-content-item-wrapper{
             position: absolute;
+
+            @media(max-width: 1000px){
+                position: static;
+                height: 100% !important;
+            }
+
+            &:nth-child(3){
+                @media(max-width: 650px){
+                    margin-bottom: 230px;
+                }
+            }
 
             &-first{
                 top: 20px;
@@ -286,18 +491,39 @@
             .merits-content-item{
                 padding: 71px 33px 41px 33px;
                 position: relative;
+
+                @media(max-width: 1150px){
+                    padding: 46px 22px 34px 22px;
+                }
     
                 &-text{
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 19px;
                     max-width: 375px;
+
+                    @media(max-width: 1150px){
+                        font-size: 16px;
+                    }
+
+                    @media(max-width: 650px){
+                        font-size: 15px;
+                    }
                 }
     
                 &-light{
                     background-color: var(--light-blue);
                     border-radius: 44px;
                     width: fit-content;
+
+                    @media(max-width: 1000px){
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @media(max-width: 650px){
+                        height: fit-content !important;
+                    }
     
                     .merits-content-item-text{
                         color: var(--dark-blue);
@@ -308,6 +534,15 @@
                     background-color: var(--dark-blue);
                     border-radius: 44px;
                     width: fit-content;
+
+                    @media(max-width: 1000px){
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    @media(max-width: 650px){
+                        height: fit-content !important;
+                    }
     
                     .merits-content-item-text{
                         color: var(--white);
@@ -323,11 +558,20 @@
                     top: -15px;
                     transform: rotate(-5deg);
 
+                    @media(max-width: 650px){
+                        padding: 20px 15px;
+                    }
+
                     .merits-content-item-num{
                         font-family: 'Dela Gothic One';
                         font-size: 38px;
                         font-weight: 400;
                         line-height: 19px;
+
+                        @media(max-width: 650px){
+                            font-size: 27px;
+                            line-height: 13px;
+                        }
                     }
 
                     &-dark{
@@ -357,6 +601,42 @@
             left: 50%;
             transform: translate(-50%, -50%) rotate(-10deg);
             z-index: 2;
+
+            @media(max-width: 1150px){
+                width: 400px;
+                height: 400px;
+            }
+
+            @media(max-width: 1050px){
+                height: 300px;
+                width: 300px;
+            }
+
+            @media(max-width: 1000px){
+                height: 274px;
+                width: 274px;
+                display: none;
+            }
+        }
+
+        .mobile-merits-img{
+            display: none;
+
+            @media(max-width: 650px){
+                display: block;
+                top: 52%;
+                transform: translate(-50%, -52%);
+                height: 300px;
+                width: 300px;
+            }
+
+            @media(max-width: 450px){
+                display: block;
+                top: 52%;
+                transform: translate(-50%, -52%);
+                height: 274px;
+                width: 274px;
+            }
         }
     }
 }
@@ -374,22 +654,37 @@
         .title-partner{
             font-size: 32px !important;
             border: 4px solid var(--white);   
+
+            @media(max-width: 600px){
+                font-size: 20px !important;
+            }
         }
 
         .partner-content{
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            column-gap: 132px;
+            width: 100%;
+            grid-template-columns: repeat(4, 210px);
+            justify-content: space-between;
             row-gap: 17px;
 
+            @media(max-width: 900px){
+                display: flex;
+                gap: 13px;
+                overflow-x: scroll;
+                scrollbar-width: none;
+            }
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
             &-item{
-                width: 210px;
-                height: 210px;
                 aspect-ratio: 1 / 1;
                 background-color: var(--dark-blue);
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                min-width: 156px;
 
                 &-img{
                     object-fit: cover;
