@@ -1,8 +1,9 @@
 const dropdown = () => {
     const arrow = document.querySelector('.arrow'),
-        dropdownMenu = document.querySelector('.dropdown-menu')
+        dropdownMenu = document.querySelector('.dropdown-menu'),
+        dropdownContent = document.querySelector('.dropdown-content')
 
-        arrow.addEventListener('click', () => {
+        dropdownContent.addEventListener('click', () => {
             arrow.classList.toggle('arrow-active')
 
             dropdownMenu.classList.toggle('dropdown-menu-active')

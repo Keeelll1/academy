@@ -49,13 +49,16 @@
         font-weight: 400;
 
             .dropdown{
-                display: flex;
-                align-items: center;
-                gap: 10px;
                 position: relative;
 
-                .arrow{
+                &-content{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
                     cursor: pointer;
+                }
+
+                .arrow{
                     transition: 0.1s;
 
                     &-active{

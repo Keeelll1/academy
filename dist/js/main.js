@@ -2,8 +2,9 @@
 
 var dropdown = function dropdown() {
   var arrow = document.querySelector('.arrow'),
-    dropdownMenu = document.querySelector('.dropdown-menu');
-  arrow.addEventListener('click', function () {
+    dropdownMenu = document.querySelector('.dropdown-menu'),
+    dropdownContent = document.querySelector('.dropdown-content');
+  dropdownContent.addEventListener('click', function () {
     arrow.classList.toggle('arrow-active');
     dropdownMenu.classList.toggle('dropdown-menu-active');
   });
