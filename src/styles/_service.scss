@@ -1,0 +1,40 @@
+.page-title{
+    padding-bottom: 80px;
+}
+
+.block{
+    padding-bottom: 70px;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        .block-title-wrapper{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+    
+            .block-title{
+                font-family: 'Dela Gothic One';
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 50.86px;
+                color: var(--dark-blue);
+                text-transform: uppercase;
+                white-space: nowrap;
+
+                @media(max-width: 850px){
+                    font-size: 25px;
+                }  
+            }
+
+            .block-line{
+                height: 2px;
+                width: 100%;
+                background-color: var(--light-blue);
+            }
+        }
+    }
+
+}

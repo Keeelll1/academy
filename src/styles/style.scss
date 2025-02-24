@@ -4,6 +4,7 @@
 @use 'footer';
 @use 'main';
 @use 'about';
+@use 'service';
 
 .container{
     max-width: 1462px;
@@ -703,6 +704,241 @@
             background-image: url('../images/icons/Star.svg');
             left: 0;
             top: 3px;
+        }
+    }
+}
+
+.programs-card-wrapper{
+
+    .programs-card{
+        border-radius: 44px;
+        padding: 56px 32px 17px 32px;
+        position: relative;
+
+        &-dark{
+            background-color: var(--dark-blue);
+        }
+
+        &-light{
+            background-color: var(--light-blue);
+            color: var(--dark-blue);
+        }
+
+        .programs-card-header{
+            padding: 0 50px;
+            width: fit-content;
+            height: 60px;
+            border-radius: 76px;
+            transform: rotate(-5deg);
+            position: absolute;
+            top: -30px;
+            left: 5px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            &-light{
+                background-color: var(--light-blue);
+
+            }
+
+            &-dark{
+                background-color: var(--dark-blue);
+
+                .programs-card-header-text{
+                    color: var(--white);
+                }
+            }
+
+            &-text{
+                text-transform: uppercase;
+                color: var(--dark-blue);
+                font-size: 20px;
+                line-height: 27px;
+                font-weight: 400;
+                font-family: 'Dela Gothic One';
+
+                @media(max-width: 1250px){
+                    font-size: 16px;
+                }
+            }
+
+            &-subtext{
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 12px;
+                font-family: 'Manrope';
+                text-transform: uppercase;
+                color: var(--dark-blue);
+                text-align: end;
+            }
+        }
+
+        .programs-card-content{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            height: 100%;
+
+            @media(max-width: 1250px){
+                gap: 20px;
+            }
+
+            &-top{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .programs-card-title{
+                    text-transform: uppercase;
+                    font-family: 'Dela Gothic One';
+                    font-size: 21px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+
+                .programs-card-list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    &-title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 19px;
+                    }
+
+                    .info-list-programs{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        &-item{
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 19px;
+                            font-family: 'Manrope';
+
+                            @media(max-width: 1250px){
+                                font-size: 14px;
+                            }
+
+                            &-dark{                             
+                                &::before{
+                                    background-image: url('../images/icons/dark-star.svg');
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            &-bottom{
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 52px;
+
+                .programs-card-info-group{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 19px;
+                }
+
+                .programs-card-price-wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 27px;
+
+                    .programs-card-price{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        &-text{
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 19px;
+
+                            .bold{
+                                font-size: 32px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper{
+    overflow: visible;
+    max-width: 100%;
+
+    &-wrapper{
+        width: 100%;
+    }
+
+    &-slide{
+        height: auto;
+    }
+
+    .slider-btns {
+        position: absolute;
+        top: -190px;
+        width: 130px;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+
+        @media(max-width: 570px){
+            display: none;
+        }
+        }
+        
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+        display: none;
+        }
+
+        .swiper-button-next.swiper-button-disabled,
+        .swiper-button-prev.swiper-button-disabled{
+            opacity: 1;
+        }
+    }
+
+    .block-slider-btns{
+        display: none;
+    }
+
+    .swiper-pagination{
+        bottom: -25px;
+        display: none;
+
+        @media(max-width: 570px){
+            display: block;
+        }
+
+        &-bullet{
+            width: 7px;
+            height: 7px;
+            background-color: var(--dark-blue-opacity);
+
+            &-active{
+                background-color: var(--dark-blue);
+            }
         }
     }
 }
