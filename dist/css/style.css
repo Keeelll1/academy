@@ -378,7 +378,8 @@ a {
 .header__inner .burger__menu__content {
   background-color: var(--white);
   display: none;
-  position: absolute;
+  position: fixed;
+  height: 100vh;
   top: 0;
   right: 0;
   z-index: 3;
