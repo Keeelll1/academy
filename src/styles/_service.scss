@@ -26,7 +26,12 @@
 
                 @media(max-width: 850px){
                     font-size: 25px;
-                }  
+                    white-space: wrap;
+                }
+                
+                @media(max-width: 650px){
+                    white-space: wrap;
+                } 
             }
 
             .block-line{
@@ -34,7 +39,113 @@
                 width: 100%;
                 background-color: var(--light-blue);
             }
+
+            .block-line-none{
+                @media(max-width: 650px){
+                    display: none;
+                } 
+            }
         }
     }
 
+}
+
+.service-info{
+    padding: 87px 0 115px 0;
+    background-color: var(--dark-blue);
+
+    @media(max-width: 550px){
+        padding: 70px 0;
+    }
+
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        @media(max-width: 1000px){
+            flex-direction: column;
+        }
+
+        .service-info-block{
+            background-color: var(--white);
+            border-radius: 44px;
+            padding: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            width: calc(605 / 1240 * 100%);
+
+            @media(max-width: 1200px){
+                padding: 50px;
+            }
+
+            @media(max-width: 1000px){
+                width: 100%;
+            }
+
+            @media(max-width: 550px){
+                padding: 35px;
+            }
+
+            &-title{
+                font-family: 'Dela Gothic One';
+                font-size: 32px;
+                color: var(--dark-blue);
+                line-height: 33px;
+                font-weight: 400;
+
+                @media(max-width: 1200px){
+                    font-size: 26px;
+                }
+
+                @media(max-width: 550px){
+                    font-size: 17px;
+                    line-height: 17px;
+                }
+            }
+
+            &-text{
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 25px;
+                color: var(--dark-blue);
+
+                @media(max-width: 1200px){
+                    font-size: 20px;
+                }
+
+                @media(max-width: 550px){
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+            }
+
+            &-img{
+                position: absolute;
+                width: 146px;
+                height: 146px;
+                right: -30px;
+                top: -40px;
+
+                @media(max-width: 1200px){
+                    width: 130px;
+                    height: 130px;
+                }
+
+                @media(max-width: 750px){
+                    width: 100px;
+                    height: 100px;
+                    right: -10px;
+                    top: -20px;
+                }
+
+                @media(max-width: 550px){
+                    width: 78px;
+                    height: 78px;
+                }
+            }
+        }
+    }
 }

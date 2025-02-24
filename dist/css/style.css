@@ -2662,12 +2662,142 @@ a {
 @media (max-width: 850px) {
   .block-wrapper .block-title-wrapper .block-title {
     font-size: 25px;
+    white-space: wrap;
+  }
+}
+@media (max-width: 650px) {
+  .block-wrapper .block-title-wrapper .block-title {
+    white-space: wrap;
   }
 }
 .block-wrapper .block-title-wrapper .block-line {
   height: 2px;
   width: 100%;
   background-color: var(--light-blue);
+}
+@media (max-width: 650px) {
+  .block-wrapper .block-title-wrapper .block-line-none {
+    display: none;
+  }
+}
+
+.service-info {
+  padding: 87px 0 115px 0;
+  background-color: var(--dark-blue);
+}
+@media (max-width: 550px) {
+  .service-info {
+    padding: 70px 0;
+  }
+}
+.service-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 1000px) {
+  .service-info-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.service-info-wrapper .service-info-block {
+  background-color: var(--white);
+  border-radius: 44px;
+  padding: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 48.7903225806%;
+}
+@media (max-width: 1200px) {
+  .service-info-wrapper .service-info-block {
+    padding: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .service-info-wrapper .service-info-block {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .service-info-wrapper .service-info-block {
+    padding: 35px;
+  }
+}
+.service-info-wrapper .service-info-block-title {
+  font-family: "Dela Gothic One";
+  font-size: 32px;
+  color: var(--dark-blue);
+  line-height: 33px;
+  font-weight: 400;
+}
+@media (max-width: 1200px) {
+  .service-info-wrapper .service-info-block-title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 550px) {
+  .service-info-wrapper .service-info-block-title {
+    font-size: 17px;
+    line-height: 17px;
+  }
+}
+.service-info-wrapper .service-info-block-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  color: var(--dark-blue);
+}
+@media (max-width: 1200px) {
+  .service-info-wrapper .service-info-block-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 550px) {
+  .service-info-wrapper .service-info-block-text {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+.service-info-wrapper .service-info-block-img {
+  position: absolute;
+  width: 146px;
+  height: 146px;
+  right: -30px;
+  top: -40px;
+}
+@media (max-width: 1200px) {
+  .service-info-wrapper .service-info-block-img {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 750px) {
+  .service-info-wrapper .service-info-block-img {
+    width: 100px;
+    height: 100px;
+    right: -10px;
+    top: -20px;
+  }
+}
+@media (max-width: 550px) {
+  .service-info-wrapper .service-info-block-img {
+    width: 78px;
+    height: 78px;
+  }
 }
 
 .container {
@@ -3657,7 +3787,7 @@ a {
 
 .swiper {
   overflow: visible;
-  max-width: 100%;
+  width: 100%;
 }
 .swiper-wrapper {
   width: 100%;
