@@ -68,3 +68,42 @@ const burgerMenu = () => {
 }
 
 burgerMenu();
+
+const gallery = () => {
+    const images = document.querySelectorAll('.photogallery-item-img'),
+        overlay = document.getElementById('overlay'),
+        overlayImg = document.getElementById('overlayImg');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlay.classList.add('show');
+                document.body.classList.add('no-scroll');
+            });
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.classList.remove('show');
+            document.body.classList.remove('no-scroll');
+        });
+}
+
+gallery();
+
+const dfdsfs = () => {
+    const cards = document.querySelectorAll('.feedback-block-card')
+
+    cards.forEach(card => {
+        const text = card.querySelector('.feedback-block-text'),
+            btn = card.querySelector('.feedback-block-btn')
+
+        if (text.scrollHeight <= text.clientHeight){
+            btn.remove();
+        }
+
+        console.log(text.scrollHeight);
+        console.log(text.clientHeight);
+    })
+}
+
+dfdsfs();

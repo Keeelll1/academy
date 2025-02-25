@@ -58,4 +58,34 @@ var burgerMenu = function burgerMenu() {
   });
 };
 burgerMenu();
+var gallery = function gallery() {
+  var images = document.querySelectorAll('.photogallery-item-img'),
+    overlay = document.getElementById('overlay'),
+    overlayImg = document.getElementById('overlayImg');
+  images.forEach(function (img) {
+    img.addEventListener('click', function () {
+      overlayImg.src = img.src;
+      overlay.classList.add('show');
+      document.body.classList.add('no-scroll');
+    });
+  });
+  overlay.addEventListener('click', function () {
+    overlay.classList.remove('show');
+    document.body.classList.remove('no-scroll');
+  });
+};
+gallery();
+var dfdsfs = function dfdsfs() {
+  var cards = document.querySelectorAll('.feedback-block-card');
+  cards.forEach(function (card) {
+    var text = card.querySelector('.feedback-block-text'),
+      btn = card.querySelector('.feedback-block-btn');
+    if (text.scrollHeight <= text.clientHeight) {
+      btn.remove();
+    }
+    console.log(text.scrollHeight);
+    console.log(text.clientHeight);
+  });
+};
+dfdsfs();
 //# sourceMappingURL=main.js.map

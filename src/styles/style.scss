@@ -8,6 +8,8 @@
 @use 'timetable';
 @use 'coach-page';
 @use 'personal-coach-page';
+@use 'gallery';
+@use 'feedback-page';
 
 
 .container{
@@ -1111,4 +1113,152 @@
             }
         }
     }
+}
+
+.feedback-avatar{
+    background-image: url('../images/subtract.svg');
+    width: 113px;
+    background-size: cover;
+    height: 155px;
+    padding: 35px 0 14px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 15%;
+    top: -20px;
+    transform: rotate(-15deg);
+
+    @media(max-width: 1200px){
+        left: 5%;
+    }
+
+    @media(max-width: 1000px){
+        top: -40px;
+        width: 77px;
+        height: 105px;
+        padding-top: 20px;
+        top: 0px;
+    }
+
+    @media(max-width: 850px){
+        top: -20px;
+        width: 113px;
+        height: 155px;
+        padding: 35px 0 14px 0;
+        top: -20px;
+        left: 15%;
+    }
+
+    @media(max-width: 700px){
+        top: -50px;
+    }
+
+    @media(max-width: 600px){
+        top: -20px !important;
+        width: 77px;
+        height: 105px;
+        padding-top: 20px;
+        left: 10%;
+    }
+
+    .avatar-wrapper{
+        position: relative;
+
+        .avatar-social{
+            position: absolute;
+            bottom: -2px;
+            right: -5px;
+        }
+    }
+
+    &-name{
+        font-size: 11px;
+        font-weight: 700;
+        max-width: 70px;
+        text-align: center;
+
+        @media(max-width: 1000px){
+            font-size: 7px;
+            width: 47px;
+        }
+
+        @media(max-width: 850px){
+            font-size: 11px;
+            width: 70px;
+        }
+
+        @media(max-width: 600px){
+            font-size: 7px;
+            width: 47px;
+        }
+    }
+
+    &-place{
+        background-color: brown;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media(max-width: 1000px){
+            width: 50px;
+            height: 50px;
+        }
+
+        @media(max-width: 850px){
+            width: 72px;
+            height: 72px;
+        }
+
+        @media(max-width: 600px){
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &-img{
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+.overlay div {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
 }
