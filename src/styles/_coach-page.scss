@@ -1,0 +1,17 @@
+.coach-grid-wrapper{
+    row-gap: 62px !important;
+
+    @media (max-width: 750px){
+        row-gap: 50px !important;
+    }
+
+    @media (max-width: 650px){
+        row-gap: 40px !important;
+    }
+    @media (max-width: 550px){
+        row-gap: 30px !important;
+    }
+    @media (max-width: 450px){
+        row-gap: 10px !important;
+    }
+}

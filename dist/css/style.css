@@ -3015,6 +3015,30 @@ a {
   }
 }
 
+.coach-grid-wrapper {
+  row-gap: 62px !important;
+}
+@media (max-width: 750px) {
+  .coach-grid-wrapper {
+    row-gap: 50px !important;
+  }
+}
+@media (max-width: 650px) {
+  .coach-grid-wrapper {
+    row-gap: 40px !important;
+  }
+}
+@media (max-width: 550px) {
+  .coach-grid-wrapper {
+    row-gap: 30px !important;
+  }
+}
+@media (max-width: 450px) {
+  .coach-grid-wrapper {
+    row-gap: 10px !important;
+  }
+}
+
 .container {
   max-width: 1462px;
   margin: 0 auto;
