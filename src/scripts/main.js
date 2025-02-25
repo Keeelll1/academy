@@ -10,9 +10,7 @@ const dropdown = () => {
         })
 };
 
-dropdown();
-
-document.addEventListener("DOMContentLoaded", function () {
+const slider = () => {
     new Swiper(".swiper", {
         slidesPerView: 3,
         slidesPerGroup: 1,
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
         }
     });
-});
+}
 
 const accordion = () => {
     const accordionItem = document.querySelectorAll('.accordion-item')
@@ -50,8 +48,6 @@ const accordion = () => {
         })
     })
 }
-
-accordion();
 
 const burgerMenu = () => {
     const burgerBtn = document.querySelector('.burger-icon'),
@@ -67,11 +63,9 @@ const burgerMenu = () => {
         })
 }
 
-burgerMenu();
-
 const gallery = () => {
     const images = document.querySelectorAll('.photogallery-item-img'),
-        overlay = document.getElementById('overlay'),
+        overlay = document.querySelector('.overlay'),
         overlayImg = document.getElementById('overlayImg');
 
         images.forEach(img => {
@@ -88,9 +82,7 @@ const gallery = () => {
         });
 }
 
-gallery();
-
-const dfdsfs = () => {
+const deleteBtn = () => {
     const cards = document.querySelectorAll('.feedback-block-card')
 
     cards.forEach(card => {
@@ -100,10 +92,14 @@ const dfdsfs = () => {
         if (text.scrollHeight <= text.clientHeight){
             btn.remove();
         }
-
-        console.log(text.scrollHeight);
-        console.log(text.clientHeight);
     })
 }
 
-dfdsfs();
+document.addEventListener("DOMContentLoaded", function () {
+    slider();
+    burgerMenu();
+    gallery();
+    accordion();
+    dropdown();
+    deleteBtn();
+})

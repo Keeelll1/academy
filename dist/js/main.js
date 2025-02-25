@@ -9,8 +9,7 @@ var dropdown = function dropdown() {
     dropdownMenu.classList.toggle('dropdown-menu-active');
   });
 };
-dropdown();
-document.addEventListener("DOMContentLoaded", function () {
+var slider = function slider() {
   new Swiper(".swiper", {
     slidesPerView: 3,
     slidesPerGroup: 1,
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-});
+};
 var accordion = function accordion() {
   var accordionItem = document.querySelectorAll('.accordion-item');
   accordionItem.forEach(function (item) {
@@ -45,7 +44,6 @@ var accordion = function accordion() {
     });
   });
 };
-accordion();
 var burgerMenu = function burgerMenu() {
   var burgerBtn = document.querySelector('.burger-icon'),
     burgerContent = document.querySelector('.burger__menu__content'),
@@ -57,10 +55,9 @@ var burgerMenu = function burgerMenu() {
     });
   });
 };
-burgerMenu();
 var gallery = function gallery() {
   var images = document.querySelectorAll('.photogallery-item-img'),
-    overlay = document.getElementById('overlay'),
+    overlay = document.querySelector('.overlay'),
     overlayImg = document.getElementById('overlayImg');
   images.forEach(function (img) {
     img.addEventListener('click', function () {
@@ -74,8 +71,7 @@ var gallery = function gallery() {
     document.body.classList.remove('no-scroll');
   });
 };
-gallery();
-var dfdsfs = function dfdsfs() {
+var deleteBtn = function deleteBtn() {
   var cards = document.querySelectorAll('.feedback-block-card');
   cards.forEach(function (card) {
     var text = card.querySelector('.feedback-block-text'),
@@ -83,9 +79,14 @@ var dfdsfs = function dfdsfs() {
     if (text.scrollHeight <= text.clientHeight) {
       btn.remove();
     }
-    console.log(text.scrollHeight);
-    console.log(text.clientHeight);
   });
 };
-dfdsfs();
+document.addEventListener("DOMContentLoaded", function () {
+  slider();
+  burgerMenu();
+  gallery();
+  accordion();
+  dropdown();
+  deleteBtn();
+});
 //# sourceMappingURL=main.js.map

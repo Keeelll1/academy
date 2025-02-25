@@ -1234,25 +1234,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    z-index: 0;
     visibility: hidden;
     transition: opacity 0.3s;
 }
 
-.overlay img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 10px;
-}
-
-.overlay div {
+.current-image {
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 10px;
 }
 
 .overlay.show {
-    opacity: 1;
+    z-index: 1;
     visibility: visible;
 }
 
@@ -1261,4 +1255,9 @@ body.no-scroll {
     height: 100vh;
     width: 100vw;
     position: fixed;
+}
+
+.popup{
+    max-height: 90vh;
+    max-width: 90vw;
 }
