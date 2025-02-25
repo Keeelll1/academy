@@ -1,0 +1,197 @@
+.timetable__info{
+    margin-bottom: 70px;
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+
+        .timetable__info-top{
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 1000px){
+                gap: 20px;
+            }
+
+            .timetable__info-top-title{
+                padding: 7px 35px;
+                line-height: 50px;
+                border-radius: 76px;
+                border: 4px solid var(--dark-blue);
+                color: var(--dark-blue);
+                font-size: 30px;
+                font-weight: 400;
+                font-family: 'Dela Gothic One';
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: start;
+
+                @media (max-width: 1000px){
+                    padding: 7px 25px;
+                }
+
+                @media (max-width: 650px){
+                    font-size: 25px;
+                }
+
+                @media (max-width: 550px){
+                    font-size: 16px;
+                    padding: 5px 20px;
+                }
+            }
+
+            .timetable__info-top-text{
+                padding: 10px 40px;
+                line-height: 50px;
+                border-radius: 76px;
+                border: 4px solid var(--dark-blue);
+                color: var(--white);
+                font-size: 18px;
+                font-weight: 400;
+                font-family: 'Dela Gothic One';
+                line-height: 21px;
+                background-color: var(--dark-blue);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: start;
+
+                @media (max-width: 750px){
+                    padding: 10px 23px;
+                    font-size: 16px;
+                }
+
+                @media (max-width: 650px){
+                    font-size: 14px;
+                }
+
+                @media (max-width: 550px){
+                    font-size: 10px;
+                    line-height: 11px;
+                }
+            }
+        }
+
+        .timetable__table{
+            color: var(--dark-blue);
+
+            td{
+                padding: 22px 20px 15px 20px;
+                vertical-align: center;
+
+                &:first-child{
+                    padding-right: 0;
+                    padding: 0;
+                }
+            }
+
+            tr{
+                position: relative;
+
+                &:last-child{
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 2px;
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
+                        background-color: var(--light-blue);
+                    }
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                    top: 0;
+                    background-color: var(--light-blue);
+                }
+
+                .first-column{
+                    font-family: 'Dela Gothic One';
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 22px;
+                    gap: 2px;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+
+                    @media (max-width: 1000px){
+                        font-size: 18px;
+                    }
+
+                    @media (max-width: 450px){
+                        font-size: 15px;
+                    }
+
+                    & span{
+                        display: block;
+                        font-family: 'Manrope';
+                        text-transform: none;
+                    }
+                }
+
+                .light-column{
+                    max-width: 464px;
+                    font-size: 18px;
+
+                    @media (max-width: 1000px){
+                        font-size: 16px;
+                    }
+
+                    @media (max-width: 650px){
+                        display: none;
+                    }
+                }
+
+                .bold-column{
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    text-align: start;
+
+                    @media (max-width: 750px){
+                        display: none;
+                    }
+
+                    & span{
+                        display: block;
+                    }
+                }
+
+                .bold-column-mobile{
+                    display: none;
+
+                    @media (max-width: 750px){
+                        display: block;
+                    }
+
+                    @media (max-width: 450px){
+                        font-size: 15px;
+                    }
+                }
+
+                .last-column{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 30px;
+
+                    & span{
+                        display: block;
+                    }
+
+                    @media (max-width: 450px){
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -191,6 +191,7 @@ svg * {
 :where(table) {
   border-collapse: collapse;
   border-color: currentColor;
+  width: 100%;
 }
 
 a {
@@ -2627,10 +2628,6 @@ a {
   object-fit: cover;
 }
 
-.page-title {
-  padding-bottom: 80px;
-}
-
 .block {
   padding-bottom: 70px;
 }
@@ -2800,6 +2797,221 @@ a {
   .service-info-wrapper .service-info-block-img {
     width: 78px;
     height: 78px;
+  }
+}
+
+.timetable__info {
+  margin-bottom: 70px;
+}
+.timetable__info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 33px;
+}
+.timetable__info-wrapper .timetable__info-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .timetable__info-wrapper .timetable__info-top {
+    gap: 20px;
+  }
+}
+.timetable__info-wrapper .timetable__info-top .timetable__info-top-title {
+  padding: 7px 35px;
+  line-height: 50px;
+  border-radius: 76px;
+  border: 4px solid var(--dark-blue);
+  color: var(--dark-blue);
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Dela Gothic One";
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: start;
+}
+@media (max-width: 1000px) {
+  .timetable__info-wrapper .timetable__info-top .timetable__info-top-title {
+    padding: 7px 25px;
+  }
+}
+@media (max-width: 650px) {
+  .timetable__info-wrapper .timetable__info-top .timetable__info-top-title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .timetable__info-wrapper .timetable__info-top .timetable__info-top-title {
+    font-size: 16px;
+    padding: 5px 20px;
+  }
+}
+.timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
+  padding: 10px 40px;
+  line-height: 50px;
+  border-radius: 76px;
+  border: 4px solid var(--dark-blue);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Dela Gothic One";
+  line-height: 21px;
+  background-color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: start;
+}
+@media (max-width: 750px) {
+  .timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
+    padding: 10px 23px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 550px) {
+  .timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
+    font-size: 10px;
+    line-height: 11px;
+  }
+}
+.timetable__info-wrapper .timetable__table {
+  color: var(--dark-blue);
+}
+.timetable__info-wrapper .timetable__table td {
+  padding: 22px 20px 15px 20px;
+  vertical-align: center;
+}
+.timetable__info-wrapper .timetable__table td:first-child {
+  padding-right: 0;
+  padding: 0;
+}
+.timetable__info-wrapper .timetable__table tr {
+  position: relative;
+}
+.timetable__info-wrapper .timetable__table tr:last-child::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-blue);
+}
+.timetable__info-wrapper .timetable__table tr::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 0;
+  background-color: var(--light-blue);
+}
+.timetable__info-wrapper .timetable__table tr .first-column {
+  font-family: "Dela Gothic One";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  gap: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@media (max-width: 1000px) {
+  .timetable__info-wrapper .timetable__table tr .first-column {
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  .timetable__info-wrapper .timetable__table tr .first-column {
+    font-size: 15px;
+  }
+}
+.timetable__info-wrapper .timetable__table tr .first-column span {
+  display: block;
+  font-family: "Manrope";
+  text-transform: none;
+}
+.timetable__info-wrapper .timetable__table tr .light-column {
+  max-width: 464px;
+  font-size: 18px;
+}
+@media (max-width: 1000px) {
+  .timetable__info-wrapper .timetable__table tr .light-column {
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .timetable__info-wrapper .timetable__table tr .light-column {
+    display: none;
+  }
+}
+.timetable__info-wrapper .timetable__table tr .bold-column {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: start;
+}
+@media (max-width: 750px) {
+  .timetable__info-wrapper .timetable__table tr .bold-column {
+    display: none;
+  }
+}
+.timetable__info-wrapper .timetable__table tr .bold-column span {
+  display: block;
+}
+.timetable__info-wrapper .timetable__table tr .bold-column-mobile {
+  display: none;
+}
+@media (max-width: 750px) {
+  .timetable__info-wrapper .timetable__table tr .bold-column-mobile {
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  .timetable__info-wrapper .timetable__table tr .bold-column-mobile {
+    font-size: 15px;
+  }
+}
+.timetable__info-wrapper .timetable__table tr .last-column {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.timetable__info-wrapper .timetable__table tr .last-column span {
+  display: block;
+}
+@media (max-width: 450px) {
+  .timetable__info-wrapper .timetable__table tr .last-column {
+    font-size: 15px;
   }
 }
 
@@ -3859,5 +4071,9 @@ a {
 }
 .swiper .swiper-pagination-bullet-active {
   background-color: var(--dark-blue);
+}
+
+.page-title {
+  padding-bottom: 80px;
 }
 /*# sourceMappingURL=style.css.map */
