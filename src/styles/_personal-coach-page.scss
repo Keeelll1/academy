@@ -1,0 +1,152 @@
+.coach-content{
+
+    .personal-coach-content-top-right{
+        padding: 102px 80px 102px 80px;
+        gap: 35px;
+
+        @media (max-width: 1150px){
+            padding: 45px 20px;
+        }
+
+        .info-list-coach{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .coach-content-top-right-list{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+
+            @media (max-width: 1000px){
+                font-size: 20px;
+            }
+
+            @media (max-width: 450px){
+                font-size: 16px;
+            }
+
+            & span{
+                font-weight: 700;
+            }
+
+            &::before{
+                top: 6px;
+                background-image: url('../images/icons/ball.svg');
+            }
+        }
+
+        .coach-content-top-right-text{
+            font-size: 24px;
+            font-weight: 700;
+
+            @media (max-width: 1000px){
+                font-size: 20px;
+            }
+
+            @media (max-width: 450px){
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.coach-merits{
+    padding-top: 100px;
+
+    .coach-merits-content-wrapper{
+        border: 4px solid var(--dark-blue);
+        background-color: var(--white);
+        border-radius: 37px;
+        padding: 64px 85px 84px 53px;
+        display: flex;
+        gap: 144px;
+        position: relative;
+
+        @media(max-width: 1000px){
+            gap: 80px;
+            padding: 72px 20px 48px 20px;
+        }
+
+        @media(max-width: 750px){
+            gap: 40px;
+        }
+
+        @media(max-width: 650px){
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .coach-merits-content-title{
+            padding: 10px 40px;
+            border: 4px solid var(--dark-blue);
+            border-radius: 76px;
+            width: fit-content;
+            position: absolute;
+            background-color: var(--white);
+            top: -25px;
+            left: 0px;
+            transform: rotate(-5deg);
+
+            &-text{
+                color: var(--dark-blue);
+                font-size: 20px;
+                font-family: 'Dela Gothic One';
+                font-weight: 400;
+                text-transform: uppercase;
+
+                @media(max-width: 650px){
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .coach-merits-list{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            @media(max-width: 750px){
+                gap: 22px;
+            }
+
+            &-item{
+                color: var(--dark-blue);
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 25px;
+                padding-left: 35px;
+                position: relative;
+                max-width: 486px;
+
+                @media(max-width: 1000px){
+                    font-size: 20px;
+                }
+
+                @media(max-width: 550px){
+                    font-size: 16px;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 21px;
+                    height: 21px;
+                    background-image: url('../images/icons/dark-star.svg');
+                    background-size: cover;
+                    top: 6px;
+                    left: 0;
+
+                    @media(max-width: 600px){
+                        top: 3px;
+                    }
+
+                    @media(max-width: 500px){
+                        top: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
