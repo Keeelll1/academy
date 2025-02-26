@@ -2966,6 +2966,9 @@ a {
   }
 }
 
+.feedback-block {
+  padding-bottom: 80px;
+}
 .feedback-block-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3038,7 +3041,6 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 7;
-  height: 182px;
 }
 
 .feedback-block-btn {
@@ -3069,6 +3071,89 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 40px;
+}
+
+.feedback-video {
+  background-color: var(--light-blue);
+  padding: 85px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 60px;
+}
+@media (max-width: 650px) {
+  .feedback-video {
+    gap: 20px;
+  }
+}
+.feedback-video .feedback-video-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 1000px) {
+  .feedback-video .feedback-video-content {
+    gap: 15px;
+  }
+}
+.feedback-video .feedback-video-content-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  /* Для меньших экранов */
+}
+@media (max-width: 1000px) {
+  .feedback-video .feedback-video-content-line {
+    gap: 15px;
+  }
+}
+.feedback-video .feedback-video-content-line::-webkit-scrollbar {
+  display: none;
+}
+.feedback-video .feedback-video-content-line .feedback-video-wrapper {
+  border-radius: 15px;
+  display: inline-block;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.feedback-video .feedback-video-content-line .feedback-video-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  max-width: 370px;
+  max-height: 190px;
+}
+@media (max-width: 1000px) {
+  .feedback-video .feedback-video-content-line .feedback-video-wrapper iframe {
+    width: 280px;
+  }
+}
+@media (max-width: 650px) {
+  .feedback-video .feedback-video-content-line .feedback-video-wrapper iframe {
+    max-width: 200px;
+    max-height: 110px;
+  }
+}
+@media (max-width: 550px) {
+  .feedback-video .feedback-video-content-line .feedback-video-wrapper iframe {
+    max-width: 155px;
+    max-height: 80px;
+  }
 }
 
 .container {
