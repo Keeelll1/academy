@@ -10,6 +10,10 @@
         flex-direction: column;
         gap: 70px;
 
+        @media(max-width: 600px){
+            gap: 30px;
+        }
+
         .photogallery-content-wrapper{
             display: flex;
             flex-direction: column;

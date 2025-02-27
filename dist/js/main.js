@@ -36,6 +36,38 @@ var slider = function slider() {
     }
   });
 };
+var partnerSlider = function partnerSlider() {
+  var partnerContent = document.querySelector('.partner-content');
+  var items = document.querySelectorAll('.partner-content-item');
+  if (window.innerWidth > 900) return;
+  if (!partnerContent || items.length === 0) return;
+  var partnerItemsClone = Array.from(items).map(function (item) {
+    return item.cloneNode(true);
+  });
+  partnerItemsClone.forEach(function (item) {
+    return partnerContent.appendChild(item);
+  });
+  var contentWidth = partnerContent.scrollWidth;
+  partnerContent.style.transform = 'translateX(0)';
+  partnerContent.style.transition = 'transform 0.2s linear';
+  var currentPosition = 0;
+  var slideSpeed = 0.5;
+  var intervalTime = 16;
+  function animateSlider() {
+    currentPosition -= slideSpeed;
+    if (Math.abs(currentPosition) >= contentWidth / 2) {
+      currentPosition = 0;
+      partnerContent.style.transition = 'none';
+      partnerContent.style.transform = "translateX(".concat(currentPosition, "px)");
+      setTimeout(function () {
+        partnerContent.style.transition = 'transform 0.2s linear';
+      }, 50);
+    } else {
+      partnerContent.style.transform = "translateX(".concat(currentPosition, "px)");
+    }
+  }
+  setInterval(animateSlider, intervalTime);
+};
 var accordion = function accordion() {
   var accordionItem = document.querySelectorAll('.accordion-item');
   accordionItem.forEach(function (item) {
@@ -77,7 +109,7 @@ var deleteBtn = function deleteBtn() {
   cards.forEach(function (card) {
     var text = card.querySelector('.feedback-block-text'),
       btn = card.querySelector('.feedback-block-btn');
-    if (text.scrollHeight <= text.clientHeight) {
+    if (btn && text.scrollHeight <= text.clientHeight) {
       btn.remove();
     }
   });
@@ -147,5 +179,6 @@ document.addEventListener("DOMContentLoaded", function () {
   gallery();
   accordion();
   deleteBtn();
+  partnerSlider();
 });
 //# sourceMappingURL=main.js.map

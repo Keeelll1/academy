@@ -13,6 +13,10 @@
     position: relative;
     z-index: 0;
 
+    @media(max-width: 600px){
+        border-radius: 30px !important;
+    }
+
     &-img{
         position: absolute;
         z-index: -1;

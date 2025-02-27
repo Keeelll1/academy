@@ -39,6 +39,43 @@ const slider = () => {
     });
 }
 
+const partnerSlider = () => {
+    const partnerContent = document.querySelector('.partner-content');
+    const items = document.querySelectorAll('.partner-content-item');
+
+    if (window.innerWidth > 900) return;
+
+    if (!partnerContent || items.length === 0) return;
+
+    const partnerItemsClone = Array.from(items).map(item => item.cloneNode(true));
+    partnerItemsClone.forEach(item => partnerContent.appendChild(item));
+
+    let contentWidth = partnerContent.scrollWidth;
+    partnerContent.style.transform = 'translateX(0)';
+    partnerContent.style.transition = 'transform 0.2s linear';
+
+    let currentPosition = 0;
+    const slideSpeed = 0.5;
+    const intervalTime = 16;
+
+    function animateSlider() {
+        currentPosition -= slideSpeed;
+
+        if (Math.abs(currentPosition) >= contentWidth / 2) {
+            currentPosition = 0;
+            partnerContent.style.transition = 'none';
+            partnerContent.style.transform = `translateX(${currentPosition}px)`;
+            setTimeout(() => {
+                partnerContent.style.transition = 'transform 0.2s linear';
+            }, 50);
+        } else {
+            partnerContent.style.transform = `translateX(${currentPosition}px)`;
+        }
+    }
+
+    setInterval(animateSlider, intervalTime);
+}
+
 const accordion = () => {
     const accordionItem = document.querySelectorAll('.accordion-item')
 
@@ -91,11 +128,12 @@ const deleteBtn = () => {
         const text = card.querySelector('.feedback-block-text'),
             btn = card.querySelector('.feedback-block-btn')
 
-        if (text.scrollHeight <= text.clientHeight){
+        if (btn && text.scrollHeight <= text.clientHeight) {
             btn.remove();
         }
     })
 }
+
 const sliderScroll = () => {
     const videoLines = document.querySelectorAll('.feedback-video-content-line');
     const SPEED = 1;
@@ -164,4 +202,5 @@ document.addEventListener("DOMContentLoaded", function () {
     gallery();
     accordion();
     deleteBtn();
+    partnerSlider();
 })

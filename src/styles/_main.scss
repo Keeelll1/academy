@@ -9,6 +9,7 @@
         font-family: 'Dela Gothic One';
         font-weight: 400;
         line-height: 58px;
+        text-transform: uppercase;
 
         @media(max-width: 800px){
             font-size: 36px;
@@ -20,6 +21,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        padding-top: 130px;
         padding-bottom: 95px;
 
         @media(max-width: 800px){
@@ -28,6 +30,7 @@
 
         @media(max-width: 600px){
             flex-direction: column;
+            padding-top: 100px;
         }
     }
 
@@ -88,6 +91,7 @@
         border-radius: 30px;
         position: relative;
         white-space: nowrap;
+        justify-content: center;
 
         @media(max-width: 800px){
             font-size: 13px;
@@ -148,6 +152,12 @@
     overflow: hidden;
     position: relative;
 
+    @media(max-width: 650px){
+        border-top-right-radius: 26px;
+        border-top-left-radius: 26px;
+        padding: 30px 0 50px 0;
+    }
+
     .big-cross{
         position: absolute;
         top: -40px;
@@ -181,6 +191,10 @@
         align-items: center;
         gap: 75px;
         flex-direction: column;
+
+        @media(max-width: 650px){
+            gap: 30px;
+        }
     }
 
     .title-news{
@@ -228,9 +242,9 @@
             object-fit: cover;
             border-radius: 9px;
 
-
             @media(max-width: 600px){
                 height: 209px;
+                border-radius: 5px;
             }
         }
 
@@ -254,6 +268,11 @@
     background-color: var(--light-blue);
     padding: 85px 0 90px 0;
 
+    @media(max-width: 600px){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     .title__wrapper-advantages{
         display: flex;
         flex-direction: column;
@@ -273,6 +292,11 @@
             display: flex;
             justify-content: center;
             position: relative;
+
+            @media(max-width: 670px){
+                background-color: var(--white);
+                border-radius: 26px;
+            }
 
             .advantages-mobile-img{
                 display: none;
@@ -321,6 +345,11 @@
 
 .feedback{
     padding: 75px 0 160px 0;
+
+    @media(max-width: 600px){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 
     &-wrapper{
         display: flex;
@@ -372,6 +401,7 @@
 
         @media(max-width: 850px){
             font-size: 25px;
+            padding: 15px 20px;
         }
 
         @media(max-width: 600px){
@@ -386,6 +416,7 @@
 
         @media(max-width: 600px){
             height: 160px;
+            border-radius: 26px;
         }
     }
 
@@ -408,6 +439,7 @@
             width: 100%;
             height: 375px;
             padding: 15px 22px 22px 22px;
+            border-radius: 26px;
         }
 
         .feedback-text{
@@ -429,7 +461,9 @@
         .feedback-name{
             font-weight: 700;
             font-size: 15px;
-            line-height: 24px;
+            line-height: calc(24 / 15 * 100%);
+            display: flex;
+            flex-direction: column;
 
             @media(max-width: 1200px){
                 font-size: 12px;
@@ -457,6 +491,10 @@
             @media(max-width: 1000px){
                 font-size: 13px;
             }
+
+            @media(max-width: 600px){
+                padding: 12px 0;
+            }
         }
 
         .feedback-content-wrapper{
@@ -481,6 +519,7 @@
         width: calc(1239 / 1462 * 100%);
         border-radius: 50px;
         display: flex;
+        width: 100%;
         position: relative;
 
         @media(max-width: 1200px){
@@ -498,6 +537,7 @@
         @media(max-width: 750px){
             padding: 27px;
             height: 388px;
+            border-radius: 26px;
         }
 
         .cross-training{
@@ -632,16 +672,28 @@
 .programs{
     padding: 174px 0 77px 0;
 
+    @media(max-width: 600px){
+        padding-top: 50px;
+    }
+
     &-wrapper{
         display: flex;
         flex-direction: column;
-        gap: 87px;    
+        gap: 87px;
+        
+        @media(max-width: 600px){
+            gap: 50px;
+        }
     }
 }
 
 .methodology{
     background-color: var(--light-blue);
     padding: 90px 0;
+
+    @media(max-width: 600px){
+        padding: 50px 0;
+    }
 
     &-wrapper{
         display: flex;
@@ -670,6 +722,10 @@
 
 .guide{
     padding: 79px 0 85px 0;
+
+    @media(max-width: 600px){
+        padding: 50px 0;
+    }
 
     &-wrapper{
         display: flex;
@@ -744,16 +800,26 @@
     background-color: var(--dark-blue);
     padding: 88px 0;
 
+    @media(max-width: 600px){
+        padding: 50px 0;
+    }
+
     &-wrapper{
         display: flex;
         flex-direction: column;
         gap: 70px;
+
+        @media(max-width: 600px){
+            gap: 35px;
+        }
     }
 
     .accordion{
 
         .accordion-item{
             position: relative;
+            display: flex;
+            flex-direction: column;
             padding: 18px 0;
 
             &::before{
@@ -793,11 +859,20 @@
                     background-size: cover;
                     position: absolute;
                     left: -35px;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    top: 10px;
                     background-image: url('../images/icons/plus.svg');
                     transition: 0.5s;
                     transform-origin: center;
+
+                    @media(max-width: 600px){
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    @media(max-width: 450px){
+                        width: 12px;
+                        height: 12px;
+                    }
                 }
             }
         }
@@ -806,7 +881,7 @@
             margin-left: 50px;
             height: 0;
             overflow: hidden;
-            transition: 0.5s;
+            transition: 0.2s;
             overflow-y: auto;
 
             &-text{
@@ -824,13 +899,13 @@
             height: fit-content;
             padding: 32px 0;
 
-            @media(max-width: 882px){
-                padding: 16px;
+            @media(max-width: 600px){
+                padding: 16px 0;
             }
         }
 
         .accordion-item.accordion-active .accordion-item-title::before{
-            transform:  translateY(-50%) rotate(45deg);
+            transform: rotate(45deg);
         }
     }
 }

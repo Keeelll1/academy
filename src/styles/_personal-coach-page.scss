@@ -8,6 +8,10 @@
             padding: 45px 20px;
         }
 
+        @media (max-width: 600px){
+            border-radius: 16px;
+        }
+
         .info-list-coach{
             display: flex;
             flex-direction: column;
@@ -17,7 +21,7 @@
         .coach-content-top-right-list{
             font-weight: 500;
             font-size: 24px;
-            line-height: 32px;
+            line-height: calc(32 / 24 * 100%);
 
             @media (max-width: 1000px){
                 font-size: 20px;
@@ -34,6 +38,10 @@
             &::before{
                 top: 6px;
                 background-image: url('../images/icons/ball.svg');
+
+                @media(max-width: 600px){
+                    top: 3px;
+                }
             }
         }
 
@@ -115,7 +123,7 @@
                 color: var(--dark-blue);
                 font-weight: 600;
                 font-size: 24px;
-                line-height: 25px;
+                line-height:calc(25 / 24 * 100%);
                 padding-left: 35px;
                 position: relative;
                 max-width: 486px;
@@ -124,8 +132,9 @@
                     font-size: 20px;
                 }
 
-                @media(max-width: 550px){
+                @media(max-width: 600px){
                     font-size: 16px;
+                    padding-left: 25px;
                 }
 
                 &::before{
@@ -139,12 +148,11 @@
                     left: 0;
 
                     @media(max-width: 600px){
-                        top: 3px;
+                        top: 4px;
+                        height: 16px;
+                        width: 16px;
                     }
 
-                    @media(max-width: 500px){
-                        top: 1px;
-                    }
                 }
             }
         }
