@@ -636,7 +636,7 @@
                 }
 
                 @media(max-width: 900px){
-                    top: 70px;
+                    top: 100px;
                     width: 328px;
                 }
 
@@ -644,7 +644,7 @@
                     top: 100px;
                 }
 
-                @media(max-width: 532px){
+                @media(max-width: 550px){
                     top: 50px;
                 }
             }
@@ -1245,6 +1245,7 @@
 
         @media(max-width: 600px){
             width: 100%;
+            border-radius: 30px;
         }
 
         &-text{
