@@ -95,6 +95,8 @@
                 border-bottom: 2px solid var(--light-blue);
 
                 .bold-column {
+                    display: flex;
+                    flex-direction: column;
                     text-align: center;
                     font-size: 18px;
                     font-weight: 600;
@@ -145,9 +147,10 @@
                 }
 
                 .bold-column-mobile{
+                    display: none;
 
                     @media (max-width: 750px){
-                        display: block;
+                        display: flex;
                     }
 
                     @media (max-width: 450px){
