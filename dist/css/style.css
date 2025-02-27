@@ -496,6 +496,14 @@ a {
     gap: 50px;
   }
 }
+@media (max-width: 600px) {
+  .footer-wrapper .footer-main-content-wrapper .navigation-footer {
+    gap: 15px;
+  }
+}
+.footer-wrapper .footer-main-content-wrapper .navigation-footer-item {
+  line-height: 125%;
+}
 @media (max-width: 1150px) {
   .footer-wrapper .footer-main-content-wrapper .navigation-footer-item {
     font-size: 13px;
@@ -558,7 +566,7 @@ a {
 }
 .footer-wrapper .footer-info-global-wrapper .footer-info-title {
   font-weight: 700;
-  line-height: 30px;
+  line-height: 187.5%;
 }
 @media (max-width: 1150px) {
   .footer-wrapper .footer-info-global-wrapper .footer-info-title {
@@ -578,7 +586,7 @@ a {
 .footer-wrapper .footer-info-global-wrapper .footer-info-text {
   font-size: 18px;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 138.8888888889%;
 }
 @media (max-width: 1150px) {
   .footer-wrapper .footer-info-global-wrapper .footer-info-text {
@@ -643,7 +651,7 @@ a {
 .footer-wrapper .footer-link-wrapper .footer-link {
   width: 200px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 112.5%;
 }
 @media (max-width: 1150px) {
   .footer-wrapper .footer-link-wrapper .footer-link {
@@ -2683,7 +2691,7 @@ a {
 }
 .timetable__info-wrapper .timetable__info-top .timetable__info-top-title {
   padding: 7px 35px;
-  line-height: 50px;
+  line-height: 116.6666666667%;
   border-radius: 76px;
   border: 4px solid var(--dark-blue);
   color: var(--dark-blue);
@@ -2721,7 +2729,6 @@ a {
 }
 .timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
   padding: 10px 40px;
-  line-height: 50px;
   border-radius: 76px;
   border: 4px solid var(--dark-blue);
   color: var(--white);
@@ -2752,12 +2759,12 @@ a {
 @media (max-width: 650px) {
   .timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
     font-size: 14px;
+    line-height: 11px;
   }
 }
 @media (max-width: 550px) {
   .timetable__info-wrapper .timetable__info-top .timetable__info-top-text {
     font-size: 10px;
-    line-height: 11px;
   }
 }
 .timetable__info-wrapper .timetable__table {
@@ -2964,6 +2971,11 @@ a {
 .coach-merits {
   padding-top: 100px;
 }
+@media (max-width: 600px) {
+  .coach-merits {
+    padding-top: 50px;
+  }
+}
 .coach-merits .coach-merits-content-wrapper {
   border: 4px solid var(--dark-blue);
   background-color: var(--white);
@@ -2993,6 +3005,7 @@ a {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 22px;
+    padding-top: 60px;
   }
 }
 .coach-merits .coach-merits-content-wrapper .coach-merits-content-title {
@@ -3009,6 +3022,11 @@ a {
   -webkit-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
+}
+@media (max-width: 650px) {
+  .coach-merits .coach-merits-content-wrapper .coach-merits-content-title {
+    padding: 10px 20px;
+  }
 }
 .coach-merits .coach-merits-content-wrapper .coach-merits-content-title-text {
   color: var(--dark-blue);
@@ -3069,7 +3087,7 @@ a {
 }
 @media (max-width: 600px) {
   .coach-merits .coach-merits-content-wrapper .coach-merits-list-item::before {
-    top: 4px;
+    top: 0;
     height: 16px;
     width: 16px;
   }

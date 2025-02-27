@@ -63,6 +63,10 @@
 .coach-merits{
     padding-top: 100px;
 
+    @media(max-width: 600px){
+        padding-top: 50px;
+    }
+
     .coach-merits-content-wrapper{
         border: 4px solid var(--dark-blue);
         background-color: var(--white);
@@ -84,6 +88,7 @@
         @media(max-width: 650px){
             flex-direction: column;
             gap: 22px;
+            padding-top: 60px;
         }
 
         .coach-merits-content-title{
@@ -96,6 +101,10 @@
             top: -25px;
             left: 0px;
             transform: rotate(-5deg);
+
+            @media(max-width: 650px){
+                padding: 10px 20px;
+            }
 
             &-text{
                 color: var(--dark-blue);
@@ -148,7 +157,7 @@
                     left: 0;
 
                     @media(max-width: 600px){
-                        top: 4px;
+                        top: 0;
                         height: 16px;
                         width: 16px;
                     }
