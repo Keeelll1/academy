@@ -41,13 +41,17 @@
                 .photogallery-item{
 
                     &-img{
-                        object-fit: cover;
-                        object-position: center center;
+                        -o-object-fit: cover;
+                           object-fit: cover;
+                        -o-object-position: center center;
+                           object-position: center center;
                     }
                 }
             }
 
             .photogallery-content-btn{
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
                 width: fit-content;
                 color: var(--white);
                 background-color: var(--dark-blue);

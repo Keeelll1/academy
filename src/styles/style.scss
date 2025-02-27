@@ -31,6 +31,8 @@
 }
 
 .title__wrapper{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 
     .title{
@@ -42,6 +44,8 @@
         padding: 5px 30px;
         border-radius: 105px;
         background-color: var(--dark-blue);
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
 
         @media(max-width: 1170px){
@@ -73,6 +77,8 @@
             border-radius: 105px;
             font-size: 32px;
             background-color: var(--white);
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
             transform: rotate(-5deg);
             border: 4px solid var(--light-blue);
@@ -505,8 +511,10 @@
             overflow: hidden;
 
             .coach__card-img{
-                object-fit: cover;
-                object-position: top center;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -o-object-position: top center;
+                   object-position: top center;
                 aspect-ratio: 1 / 1;
             }
         }
@@ -859,6 +867,8 @@
 
         .programs-card-header{
             padding: 0 50px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
             height: 60px;
             border-radius: 76px;
@@ -1153,8 +1163,10 @@
             }
 
             .founder-content-top-img{
-                object-fit: cover;
-                object-position: 0 -40px;
+                -o-object-fit: cover;
+                   object-fit: cover;
+                -o-object-position: 0 -40px;
+                   object-position: 0 -40px;
                 width: 440px;
 
                 @media(max-width: 1180px){
@@ -1162,7 +1174,8 @@
                 }
 
                 @media(max-width: 900px){
-                    object-position: 0px -40px;
+                    -o-object-position: 0px -40px;
+                       object-position: 0px -40px;
                     width: 300px;
                 }
 
@@ -1175,7 +1188,8 @@
                 }
 
                 @media(max-width: 450px){
-                    object-position: 0 -30px;
+                    -o-object-position: 0 -30px;
+                       object-position: 0 -30px;
                     width: 80%;
                 }
             }
@@ -1394,7 +1408,8 @@
     }
 
     &-img{
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         aspect-ratio: 1/1;
     }
 }
