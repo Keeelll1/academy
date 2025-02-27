@@ -3,11 +3,11 @@ const dropdown = () => {
         dropdownMenu = document.querySelector('.dropdown-menu'),
         dropdownContent = document.querySelector('.dropdown-content')
 
-        dropdownContent.addEventListener('click', () => {
-            arrow.classList.toggle('arrow-active')
+    dropdownContent.addEventListener('click', () => {
+        arrow.classList.toggle('arrow-active')
 
-            dropdownMenu.classList.toggle('dropdown-menu-active')
-        })
+        dropdownMenu.classList.toggle('dropdown-menu-active')
+    })
 };
 
 const slider = () => {
@@ -54,13 +54,13 @@ const burgerMenu = () => {
         burgerContent = document.querySelector('.burger__menu__content'),
         cross = document.querySelector('.cross__burger__menu')
 
-        burgerBtn.addEventListener('click', () => {
-            burgerContent.classList.add('burger__menu__content-active')
+    burgerBtn.addEventListener('click', () => {
+        burgerContent.classList.add('burger__menu__content-active')
 
-            cross.addEventListener('click', () => {
-                burgerContent.classList.remove('burger__menu__content-active')
-            })
+        cross.addEventListener('click', () => {
+            burgerContent.classList.remove('burger__menu__content-active')
         })
+    })
 }
 
 const gallery = () => {
@@ -68,18 +68,20 @@ const gallery = () => {
         overlay = document.querySelector('.overlay'),
         overlayImg = document.getElementById('overlayImg');
 
-        images.forEach(img => {
-            img.addEventListener('click', () => {
-                overlayImg.src = img.src;
-                overlay.classList.add('show');
-                document.body.classList.add('no-scroll');
-            });
-        });
+    if (!overlay || !overlayImg) return;
 
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('show');
-            document.body.classList.remove('no-scroll');
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            overlayImg.src = img.src;
+            overlay.classList.add('show');
+            document.body.classList.add('no-scroll');
         });
+    });
+
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('show');
+        document.body.classList.remove('no-scroll');
+    });
 }
 
 const deleteBtn = () => {

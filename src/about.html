@@ -52,7 +52,7 @@
                     <a class="header__content-item header__content-item-social">
                         <img src="./images/icons/tg.svg" alt="tg">
                     </a>
-                    <button class="header__content-item header__content-item-button">записаться</button>
+                    <a href="#form" class="header__content-item header__content-item-button">записаться</a>
                 </div>
                 <div class="burger__menu">
                     <div class="burger-icon">
@@ -88,7 +88,7 @@
                                 <a class="header__content-item header__content-item-social">
                                     <img src="./images/icons/tg.svg" alt="tg">
                                 </a>
-                                <button class="header__content-item header__content-item-button">записаться</button>
+                                <a href="#form" class="header__content-item header__content-item-button">записаться</a>
                             </div>
                             <img src="./images/icons/cross.svg" alt="cross" class="cross__burger__menu">
                         </div>
@@ -331,7 +331,7 @@
                 </div>
             </div>
         </section>
-        <section class="form">
+        <section class="form" id="form">
             <div class="small__container">
                 <div class="form__wrapper">
                     <div class="form__left__content">
@@ -348,9 +348,9 @@
                             </div>
                         </div>
                         <form class="form__content" action="">
-                            <input class="form__input" placeholder="Ваше имя" type="text">
-                            <input class="form__input" placeholder="+7" type="text">
-                            <input class="form__input" placeholder="Комментарий" type="text">
+                            <input class="form__input" placeholder="Ваше имя" type="text" required>
+                            <input class="form__input" placeholder="+7" type="text" required>
+                            <input class="form__input" placeholder="Комментарий" type="text" required>
                             <label>
                                 <input type="checkbox" name="form" class="real-checkbox">
                                 <span class="custom-checkbox"></span>

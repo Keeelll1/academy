@@ -16,6 +16,11 @@
             gap: 40px;
         }
 
+        @media(max-width: 650px){
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .footer-main-content-wrapper{
             display: flex;
             gap: 100px;

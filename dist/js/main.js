@@ -59,6 +59,7 @@ var gallery = function gallery() {
   var images = document.querySelectorAll('.photogallery-item-img'),
     overlay = document.querySelector('.overlay'),
     overlayImg = document.getElementById('overlayImg');
+  if (!overlay || !overlayImg) return;
   images.forEach(function (img) {
     img.addEventListener('click', function () {
       overlayImg.src = img.src;

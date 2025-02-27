@@ -105,6 +105,14 @@
         @media(max-width: 1000px){
             gap: 15px;
         }
+
+        @media(max-width: 750px){
+            gap: 10px;
+        }
+
+        @media(max-width: 550px){
+            gap: 5px;
+        }
     }
 
     .feedback-video-content-line{
@@ -116,6 +124,14 @@
 
         @media(max-width: 1000px){
             gap: 15px;
+        }
+
+        @media(max-width: 750px){
+            gap: 10px;
+        }
+
+        @media(max-width: 550px){
+            gap: 5px;
         }
 
         &::-webkit-scrollbar{

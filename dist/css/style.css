@@ -457,6 +457,15 @@ a {
     gap: 40px;
   }
 }
+@media (max-width: 650px) {
+  .footer-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .footer-wrapper .footer-main-content-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1436,9 +1445,21 @@ a {
   }
 }
 .training-bottom-content .btn__link-training::after {
-  width: 35px;
-  height: 35px;
+  width: 48px;
+  height: 48px;
   background-size: 25%;
+}
+@media (max-width: 550px) {
+  .training-bottom-content .btn__link-training::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .training-bottom-content .btn__link-training::after {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .programs {
@@ -1514,6 +1535,9 @@ a {
   padding: 6px 28px;
   background-color: var(--dark-blue);
   border-radius: 105px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2948,7 +2972,7 @@ a {
   width: fit-content;
   color: var(--white);
   background-color: var(--dark-blue);
-  font-size: 28px;
+  font-size: 24px;
   padding: 15px 25px;
   font-weight: 400;
   text-transform: uppercase;
@@ -3105,6 +3129,16 @@ a {
     gap: 15px;
   }
 }
+@media (max-width: 750px) {
+  .feedback-video .feedback-video-content {
+    gap: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .feedback-video .feedback-video-content {
+    gap: 5px;
+  }
+}
 .feedback-video .feedback-video-content-line {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3118,6 +3152,16 @@ a {
 @media (max-width: 1000px) {
   .feedback-video .feedback-video-content-line {
     gap: 15px;
+  }
+}
+@media (max-width: 750px) {
+  .feedback-video .feedback-video-content-line {
+    gap: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .feedback-video .feedback-video-content-line {
+    gap: 5px;
   }
 }
 .feedback-video .feedback-video-content-line::-webkit-scrollbar {
@@ -3961,6 +4005,7 @@ a {
   border-radius: 44px;
   padding: 56px 32px 17px 32px;
   position: relative;
+  height: 100%;
 }
 .programs-card-wrapper .programs-card-dark {
   background-color: var(--dark-blue);
