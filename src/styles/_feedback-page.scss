@@ -5,6 +5,10 @@
         display: flex;
         flex-direction: column;
         gap: 80px !important;
+
+        @media(max-width: 600px){
+            gap: 40px !important;
+        }
     }
 }
 
@@ -99,6 +103,17 @@
 
     @media(max-width: 650px){
        gap: 20px;
+    }
+
+    @media(max-width: 600px){
+        padding: 50px 0;
+    }
+
+    .title__feedback{
+        @media(max-width: 600px){
+            font-size: 28px !important;
+            padding: 5px 15px !important;
+        }
     }
 
     .feedback-video-content{

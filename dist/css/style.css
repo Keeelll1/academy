@@ -1915,6 +1915,7 @@ a {
 @media (max-width: 600px) {
   .founder-wrapper .founder-content-wrapper .founder-content-bottom {
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 }
 .founder-wrapper .founder-content-wrapper .founder-content-bottom-item {
@@ -3186,6 +3187,11 @@ a {
   flex-direction: column;
   gap: 80px !important;
 }
+@media (max-width: 600px) {
+  .feedback-block-wrapper {
+    gap: 40px !important;
+  }
+}
 
 .feedback-block-card {
   padding: 40px 20px !important;
@@ -3300,6 +3306,17 @@ a {
 @media (max-width: 650px) {
   .feedback-video {
     gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .feedback-video {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 600px) {
+  .feedback-video .title__feedback {
+    font-size: 28px !important;
+    padding: 5px 15px !important;
   }
 }
 .feedback-video .feedback-video-content {
