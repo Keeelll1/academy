@@ -10,6 +10,22 @@ const dropdown = () => {
     })
 };
 
+const feedback = () => {
+    const btn = document.querySelectorAll('.feedback-block-btn'),
+        overlay = document.querySelector('.overlay'),
+        cross = document.querySelector('.small-cross')
+
+    btn.forEach(button => {
+        button.addEventListener('click', () => {
+            overlay.classList.add('show')
+
+            cross.addEventListener('click', () => {
+                overlay.classList.remove('show')
+            })
+        })
+    })
+}
+
 const slider = () => {
     new Swiper(".swiper", {
         slidesPerView: 3,
@@ -196,6 +212,7 @@ const sliderScroll = () => {
    
 document.addEventListener("DOMContentLoaded", function () {
     dropdown();
+    feedback();
     sliderScroll();
     slider();
     burgerMenu();

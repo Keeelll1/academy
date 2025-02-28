@@ -1942,7 +1942,7 @@ a {
 .founder-wrapper .founder-content-wrapper .founder-content-bottom-item-text {
   font-size: 26px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 125%;
 }
 @media (max-width: 950px) {
   .founder-wrapper .founder-content-wrapper .founder-content-bottom-item-text {
@@ -3403,6 +3403,18 @@ a {
     max-width: 155px;
     max-height: 80px;
   }
+}
+
+.programs-card-content-popup {
+  position: relative;
+}
+
+.small-cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 11px;
+  height: 11px;
 }
 
 .container {

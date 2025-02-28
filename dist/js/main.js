@@ -9,6 +9,19 @@ var dropdown = function dropdown() {
     dropdownMenu.classList.toggle('dropdown-menu-active');
   });
 };
+var feedback = function feedback() {
+  var btn = document.querySelectorAll('.feedback-block-btn'),
+    overlay = document.querySelector('.overlay'),
+    cross = document.querySelector('.small-cross');
+  btn.forEach(function (button) {
+    button.addEventListener('click', function () {
+      overlay.classList.add('show');
+      cross.addEventListener('click', function () {
+        overlay.classList.remove('show');
+      });
+    });
+  });
+};
 var slider = function slider() {
   new Swiper(".swiper", {
     slidesPerView: 3,
@@ -173,6 +186,7 @@ var sliderScroll = function sliderScroll() {
 };
 document.addEventListener("DOMContentLoaded", function () {
   dropdown();
+  feedback();
   sliderScroll();
   slider();
   burgerMenu();
